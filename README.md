@@ -1,92 +1,60 @@
-# hyperworld
+<p align="center">
+	<img alt="Veloren logo on a screenshot" src="https://cdn.discordapp.com/attachments/541307708146581519/712295605170602075/logo.png">
+</p>
 
+[![pipeline status](https://gitlab.com/veloren/veloren/badges/master/pipeline.svg)](https://gitlab.com/veloren/veloren/commits/master)
+[![coverage report](https://gitlab.com/veloren/veloren/badges/master/coverage.svg)](https://gitlab.com/veloren/veloren/commits/master)
+[![license](https://img.shields.io/github/license/veloren/veloren.svg)](https://gitlab.com/veloren/veloren/blob/master/LICENSE)
+[![discord](https://img.shields.io/discord/449602562165833758.svg)](https://discord.gg/WEXSY9h)
+[![lines of code](https://tokei.rs/b1/gitlab/veloren/veloren)](https://tokei.rs/b1/gitlab/veloren/veloren)
+[![contributor count](https://img.shields.io/github/contributors/veloren/veloren)](https://gitlab.com/veloren/veloren/-/graphs/master)
 
+## Welcome To Veloren!
 
-## Getting started
+Veloren is a multiplayer voxel RPG written in Rust. Veloren takes inspiration from games such as Cube World, Minecraft and Dwarf Fortress. The game is currently under heavy development, but is playable.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Development
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Currently the communication of contributors happens mainly on our [official Discord server](https://discord.gg/kjwJwjK). You can join it to keep up with the development, talk to us or contribute something yourself. Anyone who shows genuine effort to help is welcome in our team. You don't have to know how to program to contribute!
 
-## Add your files
+## Useful Links
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+[Sign Up](https://veloren.net/account/) - Here you can create an online account for Veloren.
+This will be needed to play on auth-enabled servers, including the official server.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/hyperworld1/hyperworld.git
-git branch -M main
-git push -uf origin main
-```
+[The Book](https://book.veloren.net) - A collection of all important information relating to Veloren. It includes information on how to compile Veloren and how to contribute.
 
-## Integrate with your tools
+[Future Plans](https://gitlab.com/veloren/veloren/-/milestones) - Go here for information about Veloren's development roadmap and what we're currently working on.
 
-- [ ] [Set up project integrations](https://gitlab.com/hyperworld1/hyperworld/-/settings/integrations)
+#### Official social media and websites
 
-## Collaborate with your team
+- [Website](https://veloren.net)
+- [Discord Server](https://discord.gg/kjwJwjK)
+- [Subreddit](https://www.reddit.com/r/Veloren)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+## Get Veloren
 
-## Test and Deploy
+We provide 64-bit builds for Linux, Mac, and Windows, which can be downloaded on the official website:
+[https://www.veloren.net/download/](https://veloren.net/download/)
 
-Use the built-in continuous integration in GitLab.
+Due to rapid development stable versions become outdated fast and might be **incompatible with the public server**.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+If you want to compile Veloren yourself, follow the instructions in our [Book](https://book.veloren.net/contributors/introduction.html).
 
-***
+## F.A.Q.
 
-# Editing this README
+### **Q:** How is this game licensed?
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+**A:** **It's free to play, modify and distribute. Forever.** Since it is a community project, we decided to license it under the **GNU GPL 3.0** license which means it will always stay free and open source.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### **Q:** What platforms are supported?
 
-## Name
-Choose a self-explaining name for your project.
+**A:** Veloren can run on Windows, Linux and Mac OS on all architectures (although x86_64 is our main focus). It's probably possible to compile Veloren on/for BSD, Fuchsia and others as well.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### **Q:** Do you accept donations?
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+**A:** You can support the project on our [OpenCollective Page](https://opencollective.com/veloren).
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Credit
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Many thanks to everyone that has contributed to Veloren's development, provided ideas, crafted art, composed music, hunted bugs, created tools and supported the project.
