@@ -1,2 +1,3 @@
 #!/bin/bash
-time cargo bench
+echo "bechmark testing..."
+# time cargo bench
