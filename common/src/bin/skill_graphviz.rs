@@ -5,7 +5,7 @@ use petgraph::{
 };
 use std::{fs::File, io::Write};
 use structopt::StructOpt;
-use veloren_common::comp::{
+use hyperworld_common::comp::{
     item::tool::ToolKind,
     skillset::{
         skills::Skill, SkillGroupKind, SkillPrerequisite, SKILL_GROUP_DEFS, SKILL_PREREQUISITES,

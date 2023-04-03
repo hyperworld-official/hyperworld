@@ -820,7 +820,7 @@ fn default_main_tool(body: &Body) -> Item {
 /// `ItemConfig`
 ///
 /// ```
-/// use veloren_common::{comp::Item, LoadoutBuilder};
+/// use hyperworld_common::{comp::Item, LoadoutBuilder};
 ///
 /// // Build a loadout with character starter defaults
 /// // and a specific sword with default sword abilities

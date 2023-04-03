@@ -7,7 +7,7 @@ use serde::Serialize;
 use std::{error::Error, fs::File, io::Write};
 use structopt::StructOpt;
 
-use veloren_common::{
+use hyperworld_common::{
     assets::ASSETS_PATH,
     comp::{
         self,

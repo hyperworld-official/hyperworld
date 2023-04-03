@@ -1,4 +1,4 @@
-use veloren_common::cmd::ServerChatCommand;
+use hyperworld_common::cmd::ServerChatCommand;
 
 /// This binary generates the markdown table used for the `players/commands.md`
 /// page in the Hyperworld Book. It can be run with `cargo cmd-doc-gen`.

@@ -4,7 +4,7 @@ use petgraph::{
     Graph,
 };
 use std::{fs::File, io::Write};
-use veloren_common::{
+use hyperworld_common::{
     assets::AssetExt,
     comp::item::ItemDesc,
     recipe::{RecipeBook, RecipeInput},

@@ -7,7 +7,7 @@
 //! Crate to handle high level networking of messages with different
 //! requirements and priorities over a number of protocols
 //!
-//! To start with the `veloren_network` crate you should focus on the 3
+//! To start with the `hyperworld_network` crate you should focus on the 3
 //! elementar structs [`Network`], [`Participant`] and [`Stream`].
 //!
 //! Say you have an application that wants to communicate with other application
@@ -41,7 +41,7 @@
 //! ```rust
 //! use std::sync::Arc;
 //! use tokio::{join, runtime::Runtime, time::sleep};
-//! use veloren_network::{ConnectAddr, ListenAddr, Network, Pid, Promises};
+//! use hyperworld_network::{ConnectAddr, ListenAddr, Network, Pid, Promises};
 //!
 //! // Client
 //! async fn client(runtime: &Runtime) -> Result<(), Box<dyn std::error::Error>> {

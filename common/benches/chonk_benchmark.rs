@@ -1,7 +1,7 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 use vek::*;
-use veloren_common::{
+use hyperworld_common::{
     terrain::{
         block::{Block, BlockKind},
         SpriteKind, TerrainChunk, TerrainChunkMeta,

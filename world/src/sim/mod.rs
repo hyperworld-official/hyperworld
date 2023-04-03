@@ -564,7 +564,7 @@ pub type ModernMap = WorldMap_0_7_0;
 /// TODO: Consider using some naming convention to automatically change this
 /// with changing versions, or at least keep it in a constant somewhere that's
 /// easy to change.
-pub const DEFAULT_WORLD_MAP: &str = "world.map.veloren_0_9_0_0";
+pub const DEFAULT_WORLD_MAP: &str = "world.map.hyperworld_0_9_0_0";
 
 impl WorldFileLegacy {
     #[inline]

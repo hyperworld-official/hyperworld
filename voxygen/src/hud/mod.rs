@@ -5092,7 +5092,7 @@ pub fn angle_of_attack_text(
 ///
 /// # Examples
 /// ```
-/// use veloren_voxygen::hud::multiplier_to_percentage;
+/// use hyperworld_voxygen::hud::multiplier_to_percentage;
 ///
 /// let positive = multiplier_to_percentage(1.05);
 /// assert!((positive - 5.0).abs() < 0.0001);

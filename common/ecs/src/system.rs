@@ -218,7 +218,7 @@ pub fn gen_stats(
 ///
 /// ```
 /// use specs::Read;
-/// pub use veloren_common_ecs::{Job, Origin, ParMode, Phase, System};
+/// pub use hyperworld_common_ecs::{Job, Origin, ParMode, Phase, System};
 /// # use std::time::Duration;
 /// pub struct Sys;
 /// impl<'a> System<'a> for Sys {

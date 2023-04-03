@@ -210,7 +210,7 @@ pub fn handle_destroy(server: &mut Server, entity: EcsEntity, last_change: Healt
     // Award EXP to damage contributors
     //
     // NOTE: Debug logging is disabled by default for this module - to enable it add
-    // veloren_server::events::entity_manipulation=debug to RUST_LOG
+    // hyperworld_server::events::entity_manipulation=debug to RUST_LOG
     (|| {
         let mut skill_sets = state.ecs().write_storage::<SkillSet>();
         let healths = state.ecs().read_storage::<Health>();

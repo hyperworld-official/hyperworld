@@ -20,7 +20,7 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 use vek::*;
-use veloren_world::{
+use hyperworld_world::{
     sim::{FileOpts, WorldOpts, DEFAULT_WORLD_MAP},
     World,
 };

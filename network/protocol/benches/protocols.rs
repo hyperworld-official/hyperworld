@@ -4,7 +4,7 @@ use bytes::{Bytes, BytesMut};
 use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use std::{sync::Arc, time::Duration};
 use tokio::runtime::Runtime;
-use veloren_network_protocol::{
+use hyperworld_network_protocol::{
     InitProtocol, MpscMsg, MpscRecvProtocol, MpscSendProtocol, Pid, Promises, ProtocolError,
     ProtocolEvent, ProtocolMetricCache, ProtocolMetrics, QuicDataFormat, QuicRecvProtocol,
     QuicSendProtocol, RecvProtocol, SendProtocol, Sid, TcpRecvProtocol, TcpSendProtocol,

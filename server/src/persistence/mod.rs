@@ -220,12 +220,12 @@ pub(crate) fn establish_connection(
             )
         });
 
-    let mut veloren_connection = VelorenConnection::new(connection);
+    let mut hyperworld_connection = VelorenConnection::new(connection);
 
-    let connection = &mut veloren_connection.connection;
+    let connection = &mut hyperworld_connection.connection;
 
     set_log_mode(connection, settings.sql_log_mode);
-    veloren_connection.sql_log_mode = settings.sql_log_mode;
+    hyperworld_connection.sql_log_mode = settings.sql_log_mode;
 
     rusqlite::vtab::array::load_module(connection).expect("Failed to load sqlite array module");
 
@@ -243,5 +243,5 @@ pub(crate) fn establish_connection(
         .pragma_update(None, "busy_timeout", &"250")
         .expect("Failed to set busy_timeout PRAGMA");
 
-    veloren_connection
+    hyperworld_connection
 }

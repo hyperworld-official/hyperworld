@@ -16,7 +16,7 @@ use std::{
 use tokio::runtime::Runtime;
 use tracing::*;
 use tracing_subscriber::EnvFilter;
-use veloren_network::{ConnectAddr, ListenAddr, Message, Network, Pid, Promises};
+use hyperworld_network::{ConnectAddr, ListenAddr, Message, Network, Pid, Promises};
 
 #[derive(Serialize, Deserialize, Debug)]
 enum Msg {
@@ -83,12 +83,12 @@ fn main() {
     let filter = EnvFilter::from_default_env()
         .add_directive(trace.parse().unwrap())
         .add_directive("network_speed=debug".parse().unwrap())
-        .add_directive("veloren_network::participant=trace".parse().unwrap())
-        .add_directive("veloren_network::protocol=trace".parse().unwrap())
-        .add_directive("veloren_network::scheduler=trace".parse().unwrap())
-        .add_directive("veloren_network::api=trace".parse().unwrap())
+        .add_directive("hyperworld_network::participant=trace".parse().unwrap())
+        .add_directive("hyperworld_network::protocol=trace".parse().unwrap())
+        .add_directive("hyperworld_network::scheduler=trace".parse().unwrap())
+        .add_directive("hyperworld_network::api=trace".parse().unwrap())
         /*
-    .add_directive("veloren_network::participant=debug".parse().unwrap()).add_directive("veloren_network::api=debug".parse().unwrap())*/;
+    .add_directive("hyperworld_network::participant=debug".parse().unwrap()).add_directive("hyperworld_network::api=debug".parse().unwrap())*/;
     tracing_subscriber::FmtSubscriber::builder()
         .with_max_level(Level::ERROR)
         .with_env_filter(filter)

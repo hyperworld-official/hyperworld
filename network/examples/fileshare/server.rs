@@ -8,7 +8,7 @@ use tokio::{
 };
 use tokio_stream::wrappers::UnboundedReceiverStream;
 use tracing::*;
-use veloren_network::{ListenAddr, Network, Participant, Pid, Promises, Stream};
+use hyperworld_network::{ListenAddr, Network, Participant, Pid, Promises, Stream};
 
 #[derive(Debug)]
 struct ControlChannels {

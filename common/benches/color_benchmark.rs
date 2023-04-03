@@ -1,7 +1,7 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 use vek::*;
-use veloren_common::util::{linear_to_srgb, srgb_to_linear};
+use hyperworld_common::util::{linear_to_srgb, srgb_to_linear};
 
 fn criterion_benchmark(c: &mut Criterion) {
     let mut c = c.benchmark_group("color");

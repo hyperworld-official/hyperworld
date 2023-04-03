@@ -5,7 +5,7 @@ use specs::WorldExt;
 use std::error::Error;
 use utils::{DT, DT_F64, EPSILON};
 use vek::{approx, Vec2, Vec3};
-use veloren_common_systems::add_local_systems;
+use hyperworld_common_systems::add_local_systems;
 
 #[test]
 fn simple_run() {

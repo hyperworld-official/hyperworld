@@ -9,7 +9,7 @@ use std::{path::PathBuf, sync::Arc, thread, time::Duration};
 use tokio::{io, io::AsyncBufReadExt, runtime::Runtime, sync::mpsc};
 use tracing::*;
 use tracing_subscriber::EnvFilter;
-use veloren_network::{ConnectAddr, ListenAddr};
+use hyperworld_network::{ConnectAddr, ListenAddr};
 mod commands;
 mod server;
 use commands::{FileInfo, LocalCommand};

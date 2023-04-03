@@ -1,4 +1,4 @@
-use veloren_plugin_rt::{
+use hyperworld_plugin_rt::{
     api::{event::*, Action, GameMode},
     *,
 };

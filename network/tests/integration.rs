@@ -1,11 +1,11 @@
 #![feature(assert_matches)]
 use std::sync::Arc;
 use tokio::runtime::Runtime;
-use veloren_network::{NetworkError, StreamError};
+use hyperworld_network::{NetworkError, StreamError};
 mod helper;
 use helper::{mpsc, network_participant_stream, quic, tcp, udp, SLEEP_EXTERNAL, SLEEP_INTERNAL};
 use std::io::ErrorKind;
-use veloren_network::{ConnectAddr, ListenAddr, Network, ParticipantEvent, Pid, Promises};
+use hyperworld_network::{ConnectAddr, ListenAddr, Network, ParticipantEvent, Pid, Promises};
 
 #[test]
 fn stream_simple() {

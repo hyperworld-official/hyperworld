@@ -19,7 +19,7 @@ static GLOBAL: common_base::tracy_client::ProfiledAllocator<std::alloc::System> 
     common_base::tracy_client::ProfiledAllocator::new(std::alloc::System, 128);
 
 use i18n::{self, LocalizationHandle};
-use veloren_voxygen::{
+use hyperworld_voxygen::{
     audio::AudioFrontend,
     panic_handler,
     profile::Profile,
@@ -37,7 +37,7 @@ use common::clock::Clock;
 use std::{panic, path::PathBuf};
 use tracing::{info, warn};
 #[cfg(feature = "egui-ui")]
-use veloren_voxygen::ui::egui::EguiState;
+use hyperworld_voxygen::ui::egui::EguiState;
 
 fn main() {
     #[cfg(feature = "tracy")]
@@ -166,7 +166,7 @@ fn main() {
     i18n.set_english_fallback(settings.language.use_english_fallback);
 
     // Create window
-    use veloren_voxygen::{error::Error, render::RenderError};
+    use hyperworld_voxygen::{error::Error, render::RenderError};
     let (mut window, event_loop) = match Window::new(&settings, &tokio_runtime) {
         Ok(ok) => ok,
         // Custom panic message when a graphics backend could not be found
@@ -200,9 +200,9 @@ fn main() {
 
     #[cfg(feature = "discord")]
     let discord = if settings.networking.enable_discord_integration {
-        veloren_voxygen::discord::Discord::start(&tokio_runtime)
+        hyperworld_voxygen::discord::Discord::start(&tokio_runtime)
     } else {
-        veloren_voxygen::discord::Discord::Inactive
+        hyperworld_voxygen::discord::Discord::Inactive
     };
 
     let global_state = GlobalState {

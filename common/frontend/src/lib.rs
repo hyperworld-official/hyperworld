@@ -21,14 +21,14 @@ const RUST_LOG_ENV: &str = "RUST_LOG";
 ///
 /// For example to set this crate's debug level to `TRACE` you would need the
 /// following in your environment.
-/// `RUST_LOG="veloren_voxygen=trace"`
+/// `RUST_LOG="hyperworld_voxygen=trace"`
 ///
 /// more complex tracing can be done by concatenating with a `,` as separator:
 ///  - warn for `prometheus_hyper`, `dot_vox`, `gfx_device_gl::factory,
-///    `gfx_device_gl::shade` trace for `veloren_voxygen`, info for everything
+///    `gfx_device_gl::shade` trace for `hyperworld_voxygen`, info for everything
 ///    else
 /// `RUST_LOG="prometheus_hyper=warn,dot_vox::parser=warn,gfx_device_gl::
-/// factory=warn,gfx_device_gl::shade=warn,veloren_voxygen=trace,info"`
+/// factory=warn,gfx_device_gl::shade=warn,hyperworld_voxygen=trace,info"`
 ///
 /// By default a few directives are set to `warn` by default, until explicitly
 /// overwritten! e.g. `RUST_LOG="gfx_device_gl=debug"`
@@ -47,17 +47,17 @@ where
     // We will do lower logging than the default (INFO) by INCLUSION. This
     // means that if you need lower level logging for a specific module, then
     // put it in the environment in the correct format i.e. DEBUG logging for
-    // this crate would be veloren_voxygen=debug.
+    // this crate would be hyperworld_voxygen=debug.
 
     let mut filter = EnvFilter::default().add_directive(LevelFilter::INFO.into());
 
     let default_directives = [
         "dot_vox::parser=warn",
-        "veloren_common::trade=info",
-        "veloren_world::sim=info",
-        "veloren_world::civ=info",
-        "veloren_world::site::economy=info",
-        "veloren_server::events::entity_manipulation=info",
+        "hyperworld_common::trade=info",
+        "hyperworld_world::sim=info",
+        "hyperworld_world::civ=info",
+        "hyperworld_world::site::economy=info",
+        "hyperworld_server::events::entity_manipulation=info",
         "hyper=info",
         "prometheus_hyper=info",
         "mio::pool=info",
@@ -70,10 +70,10 @@ where
         "wgpu_core=info",
         "wgpu_core::device=warn",
         "wgpu_core::swap_chain=info",
-        "veloren_network_protocol=info",
+        "hyperworld_network_protocol=info",
         "quinn_proto::connection=info",
-        "veloren_server::persistence::character=info",
-        "veloren_server::settings=info",
+        "hyperworld_server::persistence::character=info",
+        "hyperworld_server::settings=info",
     ];
 
     for s in default_directives {

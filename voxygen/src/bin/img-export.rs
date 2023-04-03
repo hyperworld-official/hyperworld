@@ -3,7 +3,7 @@ use common::figure::Segment;
 use common_assets::{AssetExt, DotVoxAsset};
 use std::{fs, path::Path};
 use vek::{Mat4, Quaternion, Vec2, Vec3, Vec4};
-use veloren_voxygen::{
+use hyperworld_voxygen::{
     hud::item_imgs::{ImageSpec, ItemImagesSpec},
     ui::graphic::renderer::{draw_vox, SampleStrat, Transform},
 };

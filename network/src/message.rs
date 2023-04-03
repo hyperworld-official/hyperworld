@@ -70,8 +70,8 @@ impl Message {
     ///
     /// # Example
     /// ```
-    /// # use veloren_network::{Network, ListenAddr, ConnectAddr, Pid};
-    /// # use veloren_network::Promises;
+    /// # use hyperworld_network::{Network, ListenAddr, ConnectAddr, Pid};
+    /// # use hyperworld_network::Promises;
     /// # use tokio::runtime::Runtime;
     /// # use std::sync::Arc;
     ///

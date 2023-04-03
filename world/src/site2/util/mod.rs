@@ -116,7 +116,7 @@ impl Dir {
     /// Example:
     /// ```
     /// use vek::Vec3;
-    /// use veloren_world::site2::util::Dir;
+    /// use hyperworld_world::site2::util::Dir;
     /// let dir = Dir::X;
     ///
     /// assert_eq!(dir.to_mat3() * Vec3::new(1, 0, 0), dir.to_vec3());

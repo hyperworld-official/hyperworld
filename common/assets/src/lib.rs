@@ -39,7 +39,7 @@ pub trait AssetExt: Sized + Send + Sync + 'static {
     /// Function used to load assets from the filesystem or the cache.
     /// Example usage:
     /// ```no_run
-    /// use veloren_common_assets::{AssetExt, Image};
+    /// use hyperworld_common_assets::{AssetExt, Image};
     ///
     /// let my_image = Image::load("core.ui.backgrounds.city").unwrap();
     /// ```
@@ -64,7 +64,7 @@ pub trait AssetExt: Sized + Send + Sync + 'static {
     /// Function used to load essential assets from the filesystem or the cache.
     /// It will panic if the asset is not found. Example usage:
     /// ```no_run
-    /// use veloren_common_assets::{AssetExt, Image};
+    /// use hyperworld_common_assets::{AssetExt, Image};
     ///
     /// let my_image = Image::load_expect("core.ui.backgrounds.city");
     /// ```
@@ -386,7 +386,7 @@ pub mod asset_tweak {
     /// # Examples:
     /// How not to use.
     /// ```should_panic
-    /// use veloren_common_assets::asset_tweak::{tweak_expect, Specifier};
+    /// use hyperworld_common_assets::asset_tweak::{tweak_expect, Specifier};
     ///
     /// // will panic if you don't have a file
     /// let specifier = Specifier::Asset(&["no_way_we_have_this_directory", "x"]);
@@ -396,7 +396,7 @@ pub mod asset_tweak {
     /// How to use.
     /// ```
     /// use std::fs;
-    /// use veloren_common_assets::{
+    /// use hyperworld_common_assets::{
     ///     asset_tweak::{tweak_expect, Specifier},
     ///     ASSETS_PATH,
     /// };
@@ -475,7 +475,7 @@ pub mod asset_tweak {
     /// # Example:
     /// Tweaking integer value
     /// ```
-    /// use veloren_common_assets::{
+    /// use hyperworld_common_assets::{
     ///     asset_tweak::{tweak_expect_or_create, Specifier},
     ///     ASSETS_PATH,
     /// };
@@ -523,7 +523,7 @@ pub mod asset_tweak {
     /// ```
     /// // note that you need to export it from `assets` crate,
     /// // not from `assets::asset_tweak`
-    /// use veloren_common_assets::{tweak, ASSETS_PATH};
+    /// use hyperworld_common_assets::{tweak, ASSETS_PATH};
     ///
     /// // you need to create file first
     /// let own_path = ASSETS_PATH.join("tweak/grizelda.ron");
@@ -581,7 +581,7 @@ pub mod asset_tweak {
     /// // note that you need to export it from `assets` crate,
     /// // not from `assets::asset_tweak`
     /// use serde::{Deserialize, Serialize};
-    /// use veloren_common_assets::{tweak_from, ASSETS_PATH};
+    /// use hyperworld_common_assets::{tweak_from, ASSETS_PATH};
     ///
     /// #[derive(Clone, PartialEq, Deserialize, Serialize)]
     /// struct Data {

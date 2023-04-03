@@ -7,7 +7,7 @@ use std::{
 };
 use structopt::StructOpt;
 
-use veloren_common::{
+use hyperworld_common::{
     assets::{self, AssetExt},
     comp::{
         self,

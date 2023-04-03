@@ -8,7 +8,7 @@
 //! warning is logged and sfx will be disabled.
 //!
 //! Each entry in the configuration consists of an
-//! [SfxEvent](../../../veloren_common/event/enum.SfxEvent.html) item, with some
+//! [SfxEvent](../../../hyperworld_common/event/enum.SfxEvent.html) item, with some
 //! additional information to allow playback:
 //! - `files` - the paths to the `.wav` files to be played for the sfx. minus
 //!   the file extension. This can be a single item if the same sound can be
@@ -44,7 +44,7 @@
 //!
 //! These items (for example, the `Wield(Sword)` occasionally depend on some
 //! property which varies in game. The
-//! [SfxEvent](../../../veloren_common/event/enum.SfxEvent.html) documentation
+//! [SfxEvent](../../../hyperworld_common/event/enum.SfxEvent.html) documentation
 //! provides links to those variables, some examples are provided her for longer
 //! items:
 //!

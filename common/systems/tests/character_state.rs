@@ -18,7 +18,7 @@ mod tests {
     use specs::{Builder, Entity, WorldExt};
     use std::{sync::Arc, time::Duration};
     use vek::{approx::AbsDiffEq, Vec2, Vec3};
-    use veloren_common_systems::character_behavior;
+    use hyperworld_common_systems::character_behavior;
 
     const DEFAULT_WORLD_CHUNKS_LG: MapSizeLg =
         if let Ok(map_size_lg) = MapSizeLg::new(Vec2 { x: 1, y: 1 }) {

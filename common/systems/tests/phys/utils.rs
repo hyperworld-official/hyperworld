@@ -20,7 +20,7 @@ use rand::{prelude::*, rngs::SmallRng};
 use specs::{Builder, Entity, WorldExt};
 use std::{error::Error, sync::Arc, time::Duration};
 use vek::{Rgb, Vec2, Vec3};
-use veloren_common_systems::{character_behavior, phys};
+use hyperworld_common_systems::{character_behavior, phys};
 
 pub const EPSILON: f32 = 0.00002;
 const DT_MILLIS: u64 = 10;
