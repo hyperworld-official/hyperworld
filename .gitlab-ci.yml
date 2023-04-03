@@ -1,5 +1,5 @@
 stages:
-  # - check
+  - check
   - build-nightly
   - build
   - publish
