@@ -2916,18 +2916,18 @@ pub enum Stance {
 impl Stance {
     pub fn pseudo_ability_id(&self) -> &str {
         match self {
-            Stance::Sword(SwordStance::Heavy) => "veloren.core.pseudo_abilities.sword.heavy_stance",
-            Stance::Sword(SwordStance::Agile) => "veloren.core.pseudo_abilities.sword.agile_stance",
+            Stance::Sword(SwordStance::Heavy) => "hyperworld.core.pseudo_abilities.sword.heavy_stance",
+            Stance::Sword(SwordStance::Agile) => "hyperworld.core.pseudo_abilities.sword.agile_stance",
             Stance::Sword(SwordStance::Defensive) => {
-                "veloren.core.pseudo_abilities.sword.defensive_stance"
+                "hyperworld.core.pseudo_abilities.sword.defensive_stance"
             },
             Stance::Sword(SwordStance::Crippling) => {
-                "veloren.core.pseudo_abilities.sword.crippling_stance"
+                "hyperworld.core.pseudo_abilities.sword.crippling_stance"
             },
             Stance::Sword(SwordStance::Cleaving) => {
-                "veloren.core.pseudo_abilities.sword.cleaving_stance"
+                "hyperworld.core.pseudo_abilities.sword.cleaving_stance"
             },
-            Stance::None => "veloren.core.pseudo_abilities.no_stance",
+            Stance::None => "hyperworld.core.pseudo_abilities.no_stance",
         }
     }
 }

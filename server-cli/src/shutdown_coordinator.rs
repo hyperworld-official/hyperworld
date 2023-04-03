@@ -111,7 +111,7 @@ impl ShutdownCoordinator {
 
     /// Checks whether the SIGUSR1 signal has been set, which is used to trigger
     /// a graceful shutdown for an update. [Watchtower](https://containrrr.dev/watchtower/) is configured on the main
-    /// Veloren server to send SIGUSR1 instead of SIGTERM which allows us to
+    /// Hyperworld server to send SIGUSR1 instead of SIGTERM which allows us to
     /// react specifically to shutdowns that are for an update.
     /// NOTE: SIGUSR1 is not supported on Windows
     fn check_sigusr1_signal(&mut self, server: &mut Server, settings: &Settings) {

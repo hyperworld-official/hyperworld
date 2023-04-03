@@ -31,7 +31,7 @@ fn main() {
     let threadpool = rayon::ThreadPoolBuilder::new().build().unwrap();
 
     // To load a map file of your choice, replace map_file with the name of your map
-    // (stored locally in the map directory of your Veloren root), and swap the
+    // (stored locally in the map directory of your Hyperworld root), and swap the
     // sim::FileOpts::Save line below for the sim::FileOpts::Load one.
     let map_file =
         // "map_1575990726223.bin";

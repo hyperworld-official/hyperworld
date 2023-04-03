@@ -1,7 +1,7 @@
 [package]
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>", "Imbris <imbrisf@gmail.com>"]
 edition = "2021"
-name = "veloren-common-frontend"
+name = "hyperworld-common-frontend"
 description = "common stuff that is used by server-cli and voxygen directly"
 version = "0.10.0"
 
@@ -9,7 +9,7 @@ version = "0.10.0"
 tracy = ["common-base/tracy", "tracing-tracy"]
 
 [dependencies]
-common-base = { package = "veloren-common-base", path = "../base" }
+common-base = { package = "hyperworld-common-base", path = "../base" }
 
 # Logging
 termcolor = "1.1"

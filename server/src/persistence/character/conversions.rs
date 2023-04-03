@@ -325,7 +325,7 @@ where
     } else {
         get_mut_item(inventory, &inventory_items[index].position).ok_or_else(|| {
             PersistenceError::ConversionError(format!(
-                "Unable to retrieve parent veloren item {parent_id} of component from inventory."
+                "Unable to retrieve parent hyperworld item {parent_id} of component from inventory."
             ))
         })
     }

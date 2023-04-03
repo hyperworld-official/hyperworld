@@ -76,5 +76,5 @@ common-abilities-sword-reaching_flurry = Буря ударов
     .desc = Наносит несколько быстрых ударов по противнику.
 common-abilities-sword-reaching_skewer = Шампур
     .desc = Выпад вперёд с силой, достаточной для одновременного пронзания нескольких противников.
-veloren-core-pseudo_abilities-sword-stance_ability = Способность стойки с мечом
+hyperworld-core-pseudo_abilities-sword-stance_ability = Способность стойки с мечом
     .desc = В стойке с мечом эта способность будет иметь разные эффекты.

@@ -6,7 +6,7 @@ main-creating_world = Se creează lumea
 main-tip = Sfat:
 main-unbound_key_tip = nelegat
 main-notice =
-    Bine ai venit în versiunea alfa de Veloren!
+    Bine ai venit în versiunea alfa de Hyperworld!
     
     Înainte să începi distracția, te rog să ții minte câteva lucruri:
     
@@ -14,15 +14,15 @@ main-notice =
     
     - Dacă ai feedback constructiv sau rapoarte de erori, ne poți contacta pe Reddit, GitLab sau în serverul nostru de comunitate pe Discord.
     
-    - Veloren este licențiat sub licența susră-deschisă(„open-source”) GPL 3. Asta înseamnă că ești liber să joci, să modifici și să redistribui jocul 
+    - Hyperworld este licențiat sub licența susră-deschisă(„open-source”) GPL 3. Asta înseamnă că ești liber să joci, să modifici și să redistribui jocul 
      după gustul tău (cu condiția ca munca derivată să fie sub GPL 3).
      
-    - Veloren este un proiect non-profit al comunotații, iar cei care lucrează la el sunt voluntari.
+    - Hyperworld este un proiect non-profit al comunotații, iar cei care lucrează la el sunt voluntari.
     Daca îți place ce vezi, ești binevenit să te alături echipelor de dezvoltare sau echipelor de artă!
     
     Îți mulțumim că ai citit acest anunț, sperăm că te vei distra!
     
-    ~ Dezvoltatorii Veloren
+    ~ Dezvoltatorii Hyperworld
 main-login_process =
     Informații privind procesul de autentificare:
     
@@ -31,7 +31,7 @@ main-login_process =
     
     Poți să-ți faci un cont pe
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = Serverul nu a fost găsit
 main-login-authentication_error = Eroare de autentificare pe server
 main-login-internal_error = Eroare internă pe client (cel mai probabil, personajul jucătorului a fost șters)
@@ -85,7 +85,7 @@ loading-tips =
     .a11 = Jucând cu alții e distractiv! Apasă '{ $gameinput-social }' ca să vezi cine e conectat.
     .a12 = Apasă '{ $gameinput-dance }' pentru a dansa. Petrecere!
     .a13 = Apasă '{ $gameinput-glide }' ca să-ți deschizi Planorul și să cucerești cerurile.
-    .a14 = Veloren e înca în Pre-Alpha. Ne străduim să-l îmbunătățim în ficare zi!
+    .a14 = Hyperworld e înca în Pre-Alpha. Ne străduim să-l îmbunătățim în ficare zi!
     .a15 = Dacă vrei să te alături echipei de dezvoltare sau dacă doar vrei să vorbești cu noi, intră pe serverul nostru de Discord.
     .a16 = Puți comuta afișarea nivelului de sănătate pe bara de sănătate din setări
     .a17 = Așeazăte lângă un foc de tabară (cu tasta '{ $gameinput-sit }') ca să-ți vindeci rănile încetișor.

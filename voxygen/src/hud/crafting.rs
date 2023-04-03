@@ -527,31 +527,31 @@ impl<'a> Widget for Crafting<'a> {
             // ordered.
             let mut modular_entries = BTreeMap::new();
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon"),
                 (&weapon_recipe, "Modular Weapon"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.sword"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.sword"),
                 (&metal_comp_recipe, "Sword Blade"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.axe"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.axe"),
                 (&metal_comp_recipe, "Axe Head"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.hammer"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.hammer"),
                 (&metal_comp_recipe, "Hammer Head"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.bow"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.bow"),
                 (&wood_comp_recipe, "Bow Limbs"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.staff"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.staff"),
                 (&wood_comp_recipe, "Staff Shaft"),
             );
             modular_entries.insert(
-                String::from("veloren.core.pseudo_recipe.modular_weapon_component.sceptre"),
+                String::from("hyperworld.core.pseudo_recipe.modular_weapon_component.sceptre"),
                 (&wood_comp_recipe, "Sceptre Shaft"),
             );
             modular_entries
@@ -849,23 +849,23 @@ impl<'a> Widget for Crafting<'a> {
             }
 
             let recipe_kind = match recipe_name.as_str() {
-                "veloren.core.pseudo_recipe.modular_weapon" => RecipeKind::ModularWeapon,
-                "veloren.core.pseudo_recipe.modular_weapon_component.sword" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon" => RecipeKind::ModularWeapon,
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.sword" => {
                     RecipeKind::Component(ToolKind::Sword)
                 },
-                "veloren.core.pseudo_recipe.modular_weapon_component.axe" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.axe" => {
                     RecipeKind::Component(ToolKind::Axe)
                 },
-                "veloren.core.pseudo_recipe.modular_weapon_component.hammer" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.hammer" => {
                     RecipeKind::Component(ToolKind::Hammer)
                 },
-                "veloren.core.pseudo_recipe.modular_weapon_component.bow" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.bow" => {
                     RecipeKind::Component(ToolKind::Bow)
                 },
-                "veloren.core.pseudo_recipe.modular_weapon_component.staff" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.staff" => {
                     RecipeKind::Component(ToolKind::Staff)
                 },
-                "veloren.core.pseudo_recipe.modular_weapon_component.sceptre" => {
+                "hyperworld.core.pseudo_recipe.modular_weapon_component.sceptre" => {
                     RecipeKind::Component(ToolKind::Sceptre)
                 },
                 _ => RecipeKind::Simple,

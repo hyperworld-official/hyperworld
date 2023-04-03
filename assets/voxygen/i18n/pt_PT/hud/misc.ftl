@@ -8,7 +8,7 @@ hud-press_key_to_toggle_keybindings_fmt = Clique em { $key } para mostrar/oculta
 hud-press_key_to_toggle_debug_info_fmt = Clique em { $key } para mostrar/ocultar a informação de depuração
 hud-press_key_to_respawn = Clique em { $key } para renascer na última fogueira visitada.
 hud-welcome =
-    Bem vindo a Alpha do Veloren!,
+    Bem vindo a Alpha do Hyperworld!,
     
     
     Algumas dicas antes de começar:
@@ -43,7 +43,7 @@ hud-welcome =
     Quer libertar o mouse para fechar esta janela? Clique em TAB!
     
     
-    Aprecie a sua estadia no mundo de Veloren.
+    Aprecie a sua estadia no mundo de Hyperworld.
 hud-temp_quest_headline = Please, help us Traveller!
 hud-temp_quest_text =
     Dungeons filled with evil cultists

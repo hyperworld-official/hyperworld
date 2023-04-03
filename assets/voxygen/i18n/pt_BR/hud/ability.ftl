@@ -76,5 +76,5 @@ common-abilities-sword-reaching_flurry = Enxurrada Ofegante
     .desc = Executa múltiplas propulsões em direção ao seu adversário
 common-abilities-sword-reaching_skewer = Espetar
     .desc = Avança com força suficiente para atravessar múltiplos adversários.
-veloren-core-pseudo_abilities-sword-stance_ability = Abilidade Postura de Espada
+hyperworld-core-pseudo_abilities-sword-stance_ability = Abilidade Postura de Espada
     .desc = Quando em uma postura de espada, esta habilidade terá diferentes efeitos.

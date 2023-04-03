@@ -1,6 +1,6 @@
 # Habilidades de espada
 ## General
-veloren-core-pseudo_abilities-sword-stance_ability = Habilidad en posición de espada
+hyperworld-core-pseudo_abilities-sword-stance_ability = Habilidad en posición de espada
     .desc = Su efecto depende de la posición de espada actual.
 common-abilities-sword-balanced_combo = Posición equilibrada
     .desc = Te mantienes en una postura de equilibrio, sin nada especial que destacar.

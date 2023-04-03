@@ -1539,7 +1539,7 @@ impl Hud {
                         .set(self.ids.hurt_bg, ui_widgets);
                 }
                 // Alpha Disclaimer
-                Text::new(&format!("Veloren {}", &version))
+                Text::new(&format!("Hyperworld {}", &version))
                     .font_id(self.fonts.cyri.conrod_id)
                     .font_size(self.fonts.cyri.scale(10))
                     .color(TEXT_COLOR)

@@ -1,8 +1,8 @@
 code-quality:
   extends: .recompile-branch
   stage: check
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
-  tags: ["veloren/veloren", "check"]
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  tags: ["hyperworld/hyperworld", "check"]
   script:
     - echo $CI_COMMIT_TAG
     - echo $TAG_REGEX
@@ -13,8 +13,8 @@ code-quality:
 security:
   extends: .recompile-branch
   stage: check
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
-  tags: ["veloren/veloren", "check"]
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  tags: ["hyperworld/hyperworld", "check"]
   allow_failure: true
   script:
     - ln -s /dockercache/target target

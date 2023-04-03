@@ -230,7 +230,7 @@ lazy_static! {
     /// Lazy static to find and cache where the asset directory is.
     /// Cases we need to account for:
     /// 1. Running through airshipper (`assets` next to binary)
-    /// 2. Install with package manager and run (assets probably in `/usr/share/veloren/assets` while binary in `/usr/bin/`)
+    /// 2. Install with package manager and run (assets probably in `/usr/share/hyperworld/assets` while binary in `/usr/bin/`)
     /// 3. Download & hopefully extract zip (`assets` next to binary)
     /// 4. Running through cargo (`assets` in workspace root but not always in cwd in case you `cd voxygen && cargo r`)
     /// 5. Running executable in the target dir (`assets` in workspace)
@@ -260,18 +260,18 @@ lazy_static! {
         #[cfg(all(unix, not(target_os = "macos"), not(target_os = "ios"), not(target_os = "android")))]
         {
             if let Ok(result) = std::env::var("XDG_DATA_HOME") {
-                paths.push(format!("{}/veloren/", result).into());
+                paths.push(format!("{}/hyperworld/", result).into());
             } else if let Ok(result) = std::env::var("HOME") {
-                paths.push(format!("{}/.local/share/veloren/", result).into());
+                paths.push(format!("{}/.local/share/hyperworld/", result).into());
             }
 
             if let Ok(result) = std::env::var("XDG_DATA_DIRS") {
-                result.split(':').for_each(|x| paths.push(format!("{}/veloren/", x).into()));
+                result.split(':').for_each(|x| paths.push(format!("{}/hyperworld/", x).into()));
             } else {
                 // Fallback
                 let fallback_paths = vec!["/usr/local/share", "/usr/share"];
                 for fallback_path in fallback_paths {
-                    paths.push(format!("{}/veloren/", fallback_path).into());
+                    paths.push(format!("{}/hyperworld/", fallback_path).into());
                 }
             }
         }

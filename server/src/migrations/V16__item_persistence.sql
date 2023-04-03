@@ -86,7 +86,7 @@ INSERT
 INTO    item
 VALUES  (1,
          1,
-         'veloren.core.pseudo_containers.world',
+         'hyperworld.core.pseudo_containers.world',
          1,
          'world');
 
@@ -104,7 +104,7 @@ INSERT
 INTO    item
 SELECT  c.id + 1,
         1, -- Parent container as World pseudo-container
-        'veloren.core.pseudo_containers.character',
+        'hyperworld.core.pseudo_containers.character',
         1,
         c.id + 1  -- Position
 FROM    _character_bak c;
@@ -123,7 +123,7 @@ INSERT
 INTO    item
 SELECT  c.id + 1 + (1 * (SELECT MAX(cb.id) + 1 FROM _character_bak cb)),
         c.id + 1, -- Inventory pseudo-container has character's Player item pseudo-container as its parent
-        'veloren.core.pseudo_containers.inventory',
+        'hyperworld.core.pseudo_containers.inventory',
         1,
         'inventory' -- Position
 FROM    _character_bak c;
@@ -142,7 +142,7 @@ INSERT
 INTO    item
 SELECT  c.id + 1 + (2 * (SELECT MAX(cb.id) + 1 FROM _character_bak cb)),
         c.id + 1, -- Loadout pseudo-container has character's Player item pseudo-container as its parent
-        'veloren.core.pseudo_containers.loadout',
+        'hyperworld.core.pseudo_containers.loadout',
         1,
         'loadout' --Position
 FROM    _character_bak c;

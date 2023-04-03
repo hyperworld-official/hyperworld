@@ -69,5 +69,5 @@ common-abilities-sword-reaching_flurry = Raffale de fentes
     .desc = Faites de multiples fentes rapides sur votre ennemi.
 common-abilities-sword-reaching_skewer = Brochette
     .desc = S'élancer en avant avec assez de force pour transpercer plusieurs ennemis.
-veloren-core-pseudo_abilities-sword-stance_ability = Compétences de posture à l'épée
+hyperworld-core-pseudo_abilities-sword-stance_ability = Compétences de posture à l'épée
     .desc = Lorsque vous êtes en posture avec une épée, cette capacité a des effets différents.

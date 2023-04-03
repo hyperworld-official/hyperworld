@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=Veloren
-Comment=Veloren is a multiplayer voxel RPG written in Rust
-Comment[de]=Veloren ist ein in Rust geschriebenes Mehrspieler Voxel RPG
-Exec=veloren-voxygen
+Name=Hyperworld
+Comment=Hyperworld is a multiplayer voxel RPG written in Rust
+Comment[de]=Hyperworld ist ein in Rust geschriebenes Mehrspieler Voxel RPG
+Exec=hyperworld-voxygen
 Categories=Game;Simulation;
-Keywords=veloren;sandbox;world;blocks;nodes;multiplayer;roleplaying;
-Icon=net.veloren.veloren
+Keywords=hyperworld;sandbox;world;blocks;nodes;multiplayer;roleplaying;
+Icon=net.hyperworld.hyperworld
 Terminal=false

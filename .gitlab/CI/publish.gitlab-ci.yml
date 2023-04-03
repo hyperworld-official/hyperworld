@@ -1,5 +1,5 @@
-# Publishes veloren-server-cli to the gitlab container registry
-# https://gitlab.com/veloren/veloren/container_registry
+# Publishes hyperworld-server-cli to the gitlab container registry
+# https://gitlab.com/hyperworld1/hyperworld/container_registry
 .publish:
   stage: publish
   rules:
@@ -12,7 +12,7 @@ docker:
   image:
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
-  tags: ["veloren/veloren", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld", "publish", "trusted"]
   dependencies:
     - linux-x86_64
   before_script:
@@ -33,14 +33,14 @@ gittag:
   extends: .publish
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "schedule"
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
   dependencies: []
-  tags: ["veloren/veloren", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld", "publish", "trusted"]
   script:
-    - git config --global user.email "gitlab-veloren-bot@veloren.net"
-    - git config --global user.name "veloren-bot"
+    - git config --global user.email "gitlab-hyperworld-bot@hyperworld.net"
+    - git config --global user.name "hyperworld-bot"
     - git config --global http.postBuffer 52428800
-    - git remote set-url origin https://veloren-bot:${GITLAB_TOKEN_WRITE}@${CI_PROJECT_URL:8}
+    - git remote set-url origin https://hyperworld-bot:${GITLAB_TOKEN_WRITE}@${CI_PROJECT_URL:8}
     - |
       if [[ ! "${SCHEDULE_CADENCE}" =~ ${TAG_REGEX} ]]; then
         git tag -a "${SCHEDULE_CADENCE}" -m '' -f;
@@ -51,9 +51,9 @@ pages:
   extends: .publish
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
   dependencies: []
-  tags: ["veloren/veloren", "publish"]
+  tags: ["hyperworld/hyperworld", "publish"]
   artifacts:
     paths:
       - public

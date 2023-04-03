@@ -416,7 +416,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Villagers and guards now spawn with potions, and know how to use them.
 - Combat music in dungeons when within range of enemies.
 - New Command: "kit", place a set of items into your inventory
-- Added --sql-log-mode profile/trace parameter to veloren-server-cli
+- Added --sql-log-mode profile/trace parameter to hyperworld-server-cli
 - Added /disconnect_all_players admin command
 - Added disconnectall CLI command
 - One handed weapons can now be used and found in the world
@@ -712,7 +712,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The world map has been refactored to support arbitrary sizes and compute horizon maps.
-- Veloren's lighting has been completely overhauled.
+- Hyperworld's lighting has been completely overhauled.
 - The graphics options were made much more flexible and configurable.
 - Many shader optimizations.
 - Voxel model creation was switched to use greedy meshing, improving performance.
@@ -791,7 +791,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added faction chat `/join_faction` `/faction`
 - Added regional, local, and global chat (`/region`, `/say`, and `/world`, respectively)
 - Added command shortcuts for each of the above chat modes (`/g`, `/f`, `/r`, `/s`, and `/w`, respectively and `/t` for `/tell`)
-- Ability to wield 2 × 1h weapons and shields (Note: 1h weapons & shields are not currently avaliable, see [!1095](https://gitlab.com/veloren/veloren/-/merge_requests/1095) for more info)
+- Ability to wield 2 × 1h weapons and shields (Note: 1h weapons & shields are not currently avaliable, see [!1095](https://gitlab.com/hyperworld1/hyperworld/-/merge_requests/1095) for more info)
 - Zoomable Map
 - M2 attack for hammer
 - Spawnable training dummies
@@ -876,7 +876,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New attack animation
 - Weapon control system
 - Game pauses when in single player and pause menu
-- Added authentication system (to play on the official server register on <https://account.veloren.net>)
+- Added authentication system (to play on the official server register on <https://account.hyperworld.net>)
 - Added gamepad/controller support
 - Added player feedback when attempting to pickup an item with a full inventory
 - Added free look
@@ -1113,18 +1113,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _0.1.0 was part of the legacy engine_
 
-[unreleased]: https://gitlab.com/veloren/veloren/compare?from=v0.14.0&to=master
-[0.14.0]: https://gitlab.com/veloren/veloren/compare?from=v0.13.0&to=v0.14.0
-[0.13.0]: https://gitlab.com/veloren/veloren/compare?from=v0.12.0&to=v0.13.0
-[0.12.0]: https://gitlab.com/veloren/veloren/compare?from=v0.11.0&to=v0.12.0
-[0.11.0]: https://gitlab.com/veloren/veloren/compare?from=v0.10.0&to=v0.11.0
-[0.10.0]: https://gitlab.com/veloren/veloren/compare?from=v0.9.0&to=v0.10.0
-[0.9.0]: https://gitlab.com/veloren/veloren/compare?from=v0.8.0&to=v0.9.0
-[0.8.0]: https://gitlab.com/veloren/veloren/compare?from=v0.7.0&to=v0.8.0
-[0.7.0]: https://gitlab.com/veloren/veloren/compare?from=v0.6.0&to=v0.7.0
-[0.6.0]: https://gitlab.com/veloren/veloren/compare?from=v0.5.0&to=v0.6.0
-[0.5.0]: https://gitlab.com/veloren/veloren/compare?from=v0.4.0&to=v0.5.0
-[0.4.0]: https://gitlab.com/veloren/veloren/compare?from=v0.3.0&to=v0.4.0
-[0.3.0]: https://gitlab.com/veloren/veloren/compare?from=v0.2.0&to=v0.3.0
-[0.2.0]: https://gitlab.com/veloren/veloren/compare?from=7d17f8b67a2a6d5aa00730f028cedc430fd5075a&to=v0.2.0
-[0.1.0]: https://gitlab.com/veloren/game
+[unreleased]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.14.0&to=master
+[0.14.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.13.0&to=v0.14.0
+[0.13.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.12.0&to=v0.13.0
+[0.12.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.11.0&to=v0.12.0
+[0.11.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.10.0&to=v0.11.0
+[0.10.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.9.0&to=v0.10.0
+[0.9.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.8.0&to=v0.9.0
+[0.8.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.7.0&to=v0.8.0
+[0.7.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.6.0&to=v0.7.0
+[0.6.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.5.0&to=v0.6.0
+[0.5.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.4.0&to=v0.5.0
+[0.4.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.3.0&to=v0.4.0
+[0.3.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.2.0&to=v0.3.0
+[0.2.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=7d17f8b67a2a6d5aa00730f028cedc430fd5075a&to=v0.2.0
+[0.1.0]: https://gitlab.com/hyperworld1/game

@@ -10,7 +10,7 @@ hud-press_key_to_toggle_keybindings_fmt = Druk op { $key } om te de besturing aa
 hud-press_key_to_toggle_debug_info_fmt = Druk op { $key } om debug info aan/uit te zetten
 hud-press_key_to_respawn = Druk op { $key } om te respawnen bij het laatste kampvuur dat je bezocht.
 hud-welcome =
-    Welcome bij de Veloren Alpha!
+    Welcome bij de Hyperworld Alpha!
     
     Wat tips voor je start:
     
@@ -31,7 +31,7 @@ hud-welcome =
     Gooi dingen weg door ze eenmaal aan te klikken en dan buiten je rugzak te klikken.
     
     
-    Nachten kunnen vrij donker worden in Veloren.
+    Nachten kunnen vrij donker worden in Hyperworld.
     
     Gebruik je lantaarn door 'G' te drukken
     
@@ -39,7 +39,7 @@ hud-welcome =
     Wil je je cursor gebruiken om dit venster te sluiten? Druk TAB!
     
     
-    Geniet van je verblijf in de wereld van Veloren.
+    Geniet van je verblijf in de wereld van Hyperworld.
 hud-temp_quest_headline = Help ons alsjeblieft, reiziger!
 hud-temp_quest_text =
     Kerkers vol met kwaaraardige sektes

@@ -1,8 +1,8 @@
 unittests:
   extends: .recompile-branch
   stage: build
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
-  tags: ["veloren/veloren", "check"]
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  tags: ["hyperworld/hyperworld", "check"]
   variables:
     GIT_DEPTH: 9999999999999
   script:
@@ -15,28 +15,28 @@ unittests:
 translation:
   extends: .release
   stage: build
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
-  tags: ["veloren/veloren", "check"]
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/quality:${CACHE_IMAGE_TAG}
+  tags: ["hyperworld/hyperworld", "check"]
   script:
     - ln -s /dockercache/target target
     - cat ./.gitlab/scripts/translation.sh
     - source ./.gitlab/scripts/translation.sh
     - TAGUUID="Z$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)" || echo "ignore this returncode, dont ask me why, it works"
     - echo $TAGUUID # Use TAGUUID to mitigate https://xkcd.com/327/ in the branch name
-    - echo 'SET veloren.timestamp = "'"$(git show --no-patch --no-notes --pretty='%cd' HEAD)"'";' > upload.sql
-    - echo "SET veloren.branch = \$${TAGUUID}\$${CI_COMMIT_REF_NAME}\$${TAGUUID}\$;" >> upload.sql
-    - echo "SET veloren.sha = \$${TAGUUID}\$${CI_COMMIT_SHA}\$${TAGUUID}\$;" >> upload.sql
+    - echo 'SET hyperworld.timestamp = "'"$(git show --no-patch --no-notes --pretty='%cd' HEAD)"'";' > upload.sql
+    - echo "SET hyperworld.branch = \$${TAGUUID}\$${CI_COMMIT_REF_NAME}\$${TAGUUID}\$;" >> upload.sql
+    - echo "SET hyperworld.sha = \$${TAGUUID}\$${CI_COMMIT_SHA}\$${TAGUUID}\$;" >> upload.sql
     - echo '\copy translations ("country_code", "file_name", "translation_key", "status", "git_commit") from '"'translation_analysis.csv' csv header" >> upload.sql
     - cat upload.sql
-    - PGPASSWORD="${CIDBPASSWORD}" PGSSLROOTCERT="./.gitlab/ci-db.crt" psql "sslmode=verify-ca host=grafana.veloren.net port=15432 dbname=translations" -U hgseehzjtsrghtjdcqw -f upload.sql;
+    - PGPASSWORD="${CIDBPASSWORD}" PGSSLROOTCERT="./.gitlab/ci-db.crt" psql "sslmode=verify-ca host=grafana.hyperworld.cc port=15432 dbname=translations" -U hgseehzjtsrghtjdcqw -f upload.sql;
   retry:
     max: 2
 
 benchmarks:
   extends: .release
   stage: build
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/bench:${CACHE_IMAGE_TAG}
-  tags: ["veloren/veloren", "check", "benchmark"]
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/bench:${CACHE_IMAGE_TAG}
+  tags: ["hyperworld/hyperworld", "check", "benchmark"]
   script:
     - unset DISABLE_GIT_LFS_CHECK
     - ln -s /dockercache/target target
@@ -44,12 +44,12 @@ benchmarks:
     - source ./.gitlab/scripts/benchmark.sh
     - TAGUUID="Z$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)" || echo "ignore this returncode, dont ask me why, it works"
     - echo $TAGUUID # Use TAGUUID to mitigate https://xkcd.com/327/ in the branch name
-    - echo 'SET veloren.timestamp = "'"$(git show --no-patch --no-notes --pretty='%cd' HEAD)"'";' > upload.sql
-    - echo "SET veloren.branch = \$${TAGUUID}\$${CI_COMMIT_REF_NAME}\$${TAGUUID}\$;" >> upload.sql
-    - echo "SET veloren.sha = \$${TAGUUID}\$${CI_COMMIT_SHA}\$${TAGUUID}\$;" >> upload.sql
+    - echo 'SET hyperworld.timestamp = "'"$(git show --no-patch --no-notes --pretty='%cd' HEAD)"'";' > upload.sql
+    - echo "SET hyperworld.branch = \$${TAGUUID}\$${CI_COMMIT_REF_NAME}\$${TAGUUID}\$;" >> upload.sql
+    - echo "SET hyperworld.sha = \$${TAGUUID}\$${CI_COMMIT_SHA}\$${TAGUUID}\$;" >> upload.sql
     - find target/criterion -wholename "*new/*.csv" -exec echo '\copy benchmarks ("group", "function", "value", throughput_num, throughput_type, sample_measured_value, unit, iteration_count) from '"'{}' csv header" >> upload.sql \;
     - cat upload.sql
-    - PGPASSWORD="${CIDBPASSWORD}" PGSSLROOTCERT="./.gitlab/ci-db.crt" psql "sslmode=verify-ca host=grafana.veloren.net port=15432 dbname=benchmarks" -U hgseehzjtsrghtjdcqw -f upload.sql;
+    - PGPASSWORD="${CIDBPASSWORD}" PGSSLROOTCERT="./.gitlab/ci-db.crt" psql "sslmode=verify-ca host=grafana.hyperworld.cc port=15432 dbname=benchmarks" -U hgseehzjtsrghtjdcqw -f upload.sql;
   retry:
     max: 2
 
@@ -59,9 +59,9 @@ benchmarks:
 coverage:
   extends: .release
   stage: build
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/tarpaulin:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/tarpaulin:${CACHE_IMAGE_TAG}
   coverage: '/^\d+.\d+% coverage/'
-  tags: ["veloren/veloren", "check"]
+  tags: ["hyperworld/hyperworld", "check"]
   script:
     - ln -s /dockercache/target target
     - cat ./.gitlab/scripts/coverage.sh
@@ -71,52 +71,52 @@ coverage:
 
 #linux, windows, macos builds here as template
 .tlinux-x86_64:
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/release-linux-x86_64:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/release-linux-x86_64:${CACHE_IMAGE_TAG}
   script:
     - ln -s /dockercache/target target
     - cat ./.gitlab/scripts/linux-x86_64.sh
     - source ./.gitlab/scripts/linux-x86_64.sh
-    - cp -r target/release/veloren-server-cli $CI_PROJECT_DIR
-    - cp -r target/release/veloren-voxygen $CI_PROJECT_DIR
+    - cp -r target/release/hyperworld-server-cli $CI_PROJECT_DIR
+    - cp -r target/release/hyperworld-voxygen $CI_PROJECT_DIR
   artifacts:
     paths:
-      - veloren-server-cli
-      - veloren-voxygen
+      - hyperworld-server-cli
+      - hyperworld-voxygen
       - assets/
       - LICENSE
     expire_in: 1 week
 
 .tlinux-aarch64:
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/release-linux-aarch64:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/release-linux-aarch64:${CACHE_IMAGE_TAG}
   script:
     - ln -s /dockercache/target target
     - cat ./.gitlab/scripts/linux-aarch64.sh
     - source ./.gitlab/scripts/linux-aarch64.sh
-    - cp -r target/aarch64-unknown-linux-gnu/release/veloren-server-cli $CI_PROJECT_DIR
-    - cp -r target/aarch64-unknown-linux-gnu/release/veloren-voxygen $CI_PROJECT_DIR
+    - cp -r target/aarch64-unknown-linux-gnu/release/hyperworld-server-cli $CI_PROJECT_DIR
+    - cp -r target/aarch64-unknown-linux-gnu/release/hyperworld-voxygen $CI_PROJECT_DIR
   artifacts:
     paths:
-      - veloren-server-cli
-      - veloren-voxygen
+      - hyperworld-server-cli
+      - hyperworld-voxygen
       - assets/
       - LICENSE
     expire_in: 1 week
 
 .twindows-x86_64:
-  image: registry.gitlab.com/veloren/veloren-docker-ci/cache/release-windows-x86_64:${CACHE_IMAGE_TAG}
+  image: registry.gitlab.com/hyperworld1/hyperworld-docker-ci/cache/release-windows-x86_64:${CACHE_IMAGE_TAG}
   script:
     - ln -s /dockercache/target target
     - cat ./.gitlab/scripts/windows-x86_64.sh
     - source ./.gitlab/scripts/windows-x86_64.sh
-    - cp -r target/x86_64-pc-windows-gnu/release/veloren-server-cli.exe $CI_PROJECT_DIR
-    - cp -r target/x86_64-pc-windows-gnu/release/veloren-voxygen.exe $CI_PROJECT_DIR
+    - cp -r target/x86_64-pc-windows-gnu/release/hyperworld-server-cli.exe $CI_PROJECT_DIR
+    - cp -r target/x86_64-pc-windows-gnu/release/hyperworld-voxygen.exe $CI_PROJECT_DIR
     - cp /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/libgcc_s_seh-1.dll $CI_PROJECT_DIR
     - cp /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/libstdc++-6.dll $CI_PROJECT_DIR
     - cp /usr/x86_64-w64-mingw32/lib/libwinpthread-1.dll $CI_PROJECT_DIR
   artifacts:
     paths:
-      - veloren-server-cli.exe
-      - veloren-voxygen.exe
+      - hyperworld-server-cli.exe
+      - hyperworld-voxygen.exe
       - assets/
       - LICENSE
       - libgcc_s_seh-1.dll
@@ -136,17 +136,17 @@ coverage:
   - export CARGO_INCREMENTAL=0
 
 .tmacos:
-  tags: ["veloren-macos"]
+  tags: ["hyperworld-macos"]
   script:
     - export MACOSX_DEPLOYMENT_TARGET="10.13"
     - export VELOREN_USERDATA_STRATEGY=executable
     - cargo build --release --no-default-features --features default-publish --target $RUST_TARGET
-    - cp -r target/$RUST_TARGET/release/veloren-server-cli $CI_PROJECT_DIR
-    - cp -r target/$RUST_TARGET/release/veloren-voxygen $CI_PROJECT_DIR
+    - cp -r target/$RUST_TARGET/release/hyperworld-server-cli $CI_PROJECT_DIR
+    - cp -r target/$RUST_TARGET/release/hyperworld-voxygen $CI_PROJECT_DIR
   artifacts:
     paths:
-      - veloren-server-cli
-      - veloren-voxygen
+      - hyperworld-server-cli
+      - hyperworld-voxygen
       - assets/
       - LICENSE
     expire_in: 1 week
@@ -170,59 +170,59 @@ linux-x86_64:
   extends:
     - .tlinux-x86_64
     - .release
-  tags: ["veloren/veloren", "build", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld", "build", "publish", "trusted"]
 
 linux-aarch64:
   extends:
     - .tlinux-aarch64
     - .release
-  tags: ["veloren/veloren", "build", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld", "build", "publish", "trusted"]
 
 windows-x86_64:
   extends:
     - .twindows-x86_64
     - .release
-  tags: ["veloren/veloren", "build", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld", "build", "publish", "trusted"]
 
 macos-x86_64:
   extends:
     - .tmacos-x86_64
     - .release
-  tags: ["veloren/veloren:macos", "build", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld:macos", "build", "publish", "trusted"]
 
 macos-aarch64:
   extends:
     - .tmacos-aarch64
     - .release
-  tags: ["veloren/veloren:macos", "build", "publish", "trusted"]
+  tags: ["hyperworld/hyperworld:macos", "build", "publish", "trusted"]
 
 # if NOT release or master, allow optional builds
 opt-linux-x86_64:
   extends:
     - .tlinux-x86_64
     - .optional-release
-  tags: ["veloren/veloren", "build"]
+  tags: ["hyperworld/hyperworld", "build"]
 
 opt-linux-aarch64:
   extends:
     - .tlinux-aarch64
     - .optional-release
-  tags: ["veloren/veloren", "build"]
+  tags: ["hyperworld/hyperworld", "build"]
 
 opt-windows-x86_64:
   extends:
     - .twindows-x86_64
     - .optional-release
-  tags: ["veloren/veloren", "build"]
+  tags: ["hyperworld/hyperworld", "build"]
 
 opt-macos-x86_64:
   extends:
     - .tmacos-x86_64
     - .optional-release
-  tags: ["veloren/veloren:macos", "build"]
+  tags: ["hyperworld/hyperworld:macos", "build"]
 
 opt-macos-aarch64:
   extends:
     - .tmacos-aarch64
     - .optional-release
-  tags: ["veloren/veloren:macos", "build"]
+  tags: ["hyperworld/hyperworld:macos", "build"]

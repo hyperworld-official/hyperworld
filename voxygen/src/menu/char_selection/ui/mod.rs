@@ -323,7 +323,7 @@ impl Controls {
         server_info: &ServerInfo,
     ) -> Self {
         let version = common::util::DISPLAY_VERSION_LONG.clone();
-        let alpha = format!("Veloren {}", common::util::DISPLAY_VERSION.as_str());
+        let alpha = format!("Hyperworld {}", common::util::DISPLAY_VERSION.as_str());
         let server_mismatched_version = (common::util::GIT_HASH.to_string()
             != server_info.git_hash)
             .then(|| server_info.git_hash.clone());

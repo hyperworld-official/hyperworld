@@ -1,6 +1,6 @@
 ItemDef(
     name: "Wanderer's Hat",
-    description: "The perfect headwear for those who feel at home on the highways and byways of Veloren.",
+    description: "The perfect headwear for those who feel at home on the highways and byways of Hyperworld.",
     kind: Armor((
         kind: Head,
         stats: Direct((

@@ -1,7 +1,7 @@
 [package]
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
-name = "veloren-common-net"
+name = "hyperworld-common-net"
 version = "0.10.0"
 
 [features]
@@ -10,7 +10,7 @@ simd = ["vek/platform_intrinsics"]
 default = ["simd"]
 
 [dependencies]
-common = {package = "veloren-common", path = "../../common"}
+common = {package = "hyperworld-common", path = "../../common"}
 #inline_tweak = "1.0.2"
 
 bincode = "1.3.3"

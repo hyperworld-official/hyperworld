@@ -1,5 +1,5 @@
 {
-  description = "Flake providing Veloren, a multiplayer voxel RPG written in Rust.";
+  description = "Flake providing Hyperworld, a multiplayer voxel RPG written in Rust.";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.nci.url = "github:yusdacra/nix-cargo-integration";
@@ -42,7 +42,7 @@
         lib.all (n: ! (lib.hasPrefix n _path)) pathsToIgnore;
     in
       builtins.path {
-        name = "veloren-source";
+        name = "hyperworld-source";
         path = toString ./.;
         # filter out unnecessary paths
         filter = ignorePaths;
@@ -70,14 +70,14 @@
                 - git-lfs was not installed before cloning this repository.
                 - This repository was not cloned from the primary GitLab mirror.
                 - The GitHub mirror does not support LFS.
-              See the book at https://book.veloren.net/ for details.
+              See the book at https://book.hyperworld.net/ for details.
               Run 'nix-shell -p git git-lfs --run \"git lfs install --local && git lfs fetch && git lfs checkout\"'
               or 'nix shell nixpkgs#git-lfs nixpkgs#git -c sh -c \"git lfs install --local && git lfs fetch && git lfs checkout\"'.
             "
             false
           fi
         '';
-        assets = pkgs.runCommand "veloren-assets" {} ''
+        assets = pkgs.runCommand "hyperworld-assets" {} ''
           mkdir $out
           ln -sf ${./assets} $out/assets
           ${checkIfLfsIsSetup "$out/assets/voxygen/background/bg_main.jpg"}
@@ -102,23 +102,23 @@
               --set VELOREN_GIT_VERSION "${git.prettyRev}" \
               --set VELOREN_GIT_TAG "${git.tag}"
           '';
-        veloren-common-ov = {
+        hyperworld-common-ov = {
           # We don't add in any information here because otherwise anything
           # that depends on common will be recompiled. We will set these in
           # our wrapper instead.
           NIX_GIT_HASH = "";
           NIX_GIT_TAG = "";
         };
-        voxygenOut = config.nci.outputs."veloren-voxygen";
-        serverCliOut = config.nci.outputs."veloren-server-cli";
+        voxygenOut = config.nci.outputs."hyperworld-voxygen";
+        serverCliOut = config.nci.outputs."hyperworld-server-cli";
       in {
-        packages.veloren-voxygen = wrapWithAssets voxygenOut.packages.release;
-        packages.veloren-voxygen-dev = wrapWithAssets voxygenOut.packages.dev;
-        packages.veloren-server-cli = wrapWithAssets serverCliOut.packages.release;
-        packages.veloren-server-cli-dev = wrapWithAssets serverCliOut.packages.dev;
-        packages.default = config.packages."veloren-voxygen";
+        packages.hyperworld-voxygen = wrapWithAssets voxygenOut.packages.release;
+        packages.hyperworld-voxygen-dev = wrapWithAssets voxygenOut.packages.dev;
+        packages.hyperworld-server-cli = wrapWithAssets serverCliOut.packages.release;
+        packages.hyperworld-server-cli-dev = wrapWithAssets serverCliOut.packages.dev;
+        packages.default = config.packages."hyperworld-voxygen";
 
-        devShells.default = config.nci.outputs."veloren".devShell.overrideAttrs (old: {
+        devShells.default = config.nci.outputs."hyperworld".devShell.overrideAttrs (old: {
           shellHook = ''
             ${checkIfLfsIsSetup "$PWD/assets/voxygen/background/bg_main.jpg"}
             if [ $? -ne 0 ]; then
@@ -127,9 +127,9 @@
           '';
         });
 
-        nci.projects."veloren".relPath = "";
-        nci.crates."veloren-server-cli" = let
-          veloren-server-cli-deps-ov = _: {
+        nci.projects."hyperworld".relPath = "";
+        nci.crates."hyperworld-server-cli" = let
+          hyperworld-server-cli-deps-ov = _: {
             doCheck = false;
             dontCheck = true;
           };
@@ -138,18 +138,18 @@
             release.features = ["default-publish"];
             dev.features = ["default-publish"];
           };
-          depsOverrides.fix-build.overrideAttrs = veloren-server-cli-deps-ov;
+          depsOverrides.fix-build.overrideAttrs = hyperworld-server-cli-deps-ov;
           overrides = {
-            fix-veloren-common = veloren-common-ov;
-            add-deps-reqs.overrideAttrs = veloren-server-cli-deps-ov;
+            fix-hyperworld-common = hyperworld-common-ov;
+            add-deps-reqs.overrideAttrs = hyperworld-server-cli-deps-ov;
             fix-build.override = _: {
               src = filteredSource;
               VELOREN_USERDATA_STRATEGY = "system";
             };
           };
         };
-        nci.crates."veloren-voxygen" = let
-          veloren-voxygen-deps-ov = prev: {
+        nci.crates."hyperworld-voxygen" = let
+          hyperworld-voxygen-deps-ov = prev: {
             buildInputs =
               (prev.buildInputs or [])
               ++ (
@@ -194,10 +194,10 @@
             vulkan-loader
             stdenv.cc.cc.lib
           ];
-          depsOverrides.fix-build.overrideAttrs = veloren-voxygen-deps-ov;
+          depsOverrides.fix-build.overrideAttrs = hyperworld-voxygen-deps-ov;
           overrides = {
-            fix-veloren-common = veloren-common-ov;
-            add-deps-reqs.overrideAttrs = veloren-voxygen-deps-ov;
+            fix-hyperworld-common = hyperworld-common-ov;
+            add-deps-reqs.overrideAttrs = hyperworld-voxygen-deps-ov;
             fix-build.overrideAttrs = prev: {
               src = filteredSource;
 

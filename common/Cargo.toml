@@ -1,5 +1,5 @@
 [package]
-name = "veloren-common"
+name = "hyperworld-common"
 version = "0.10.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>", "Luna Ćwięka <luna@lunareclipse.zone>", "Imbris <imbrisf@gmail.com>"]
 edition = "2021"
@@ -19,7 +19,7 @@ default = ["simd"]
 
 [dependencies]
 
-common-base = { package = "veloren-common-base", path = "base" }
+common-base = { package = "hyperworld-common-base", path = "base" }
 # inline_tweak = "1.0.8"
 
 # Serde
@@ -56,7 +56,7 @@ rand = "0.8"
 fxhash = "0.2.1"
 
 # Assets
-common-assets = {package = "veloren-common-assets", path = "assets"}
+common-assets = {package = "hyperworld-common-assets", path = "assets"}
 dot_vox = "5.1"
 
 # Assets

@@ -10,7 +10,7 @@ hud-press_key_to_toggle_keybindings_fmt = Kontrolleri açmak veya kapamak için 
 hud-press_key_to_toggle_debug_info_fmt = Hata ayıklama bilgilerini açmak veya kapamak için { $key }'e bas
 hud-press_key_to_respawn = Ziyaret ettiğin en son kamp ateşinde yeniden doğmak için { $key }'e bas.
 hud-welcome =
-    Veloren Alfa sürümüne hoşgeldin!,
+    Hyperworld Alfa sürümüne hoşgeldin!,
     
     
     Başlamadan önce bazı ipuçları:
@@ -37,7 +37,7 @@ hud-welcome =
     Üzerlerine bir kere tıklayıp ve sonra envaterin dışına tıklayarak onları at.
     
     
-    Veloren'de geceler oldukça karanlık olabiliyor.
+    Hyperworld'de geceler oldukça karanlık olabiliyor.
     
     'G' tuşuna basarak fenerini yak.
     
@@ -45,7 +45,7 @@ hud-welcome =
     Bu pencereyi kapatmak için imlecini serbest bırakmak mı istiyorsun? TAB'a bas!
     
     
-    Veloren'in Dünyasında sana iyi eğlenceler!
+    Hyperworld'in Dünyasında sana iyi eğlenceler!
 hud-temp_quest_headline = Lütfen bize yardım et maceracı!
 hud-temp_quest_text =
     Kasabamızın etrafında kültistlerle

@@ -44,7 +44,7 @@ mod embedded {
     embed_migrations!("./src/migrations");
 }
 
-/// A database connection blessed by Veloren.
+/// A database connection blessed by Hyperworld.
 pub(crate) struct VelorenConnection {
     connection: Connection,
     sql_log_mode: SqlLogMode,

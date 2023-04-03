@@ -48,7 +48,7 @@ impl Singleplayer {
             }
 
             let working_dir = std::path::PathBuf::from("saves");
-            let config_dir = directories_next::ProjectDirs::from("net", "veloren", "voxygen")
+            let config_dir = directories_next::ProjectDirs::from("net", "hyperworld", "voxygen")
                 .expect("System's $HOME directory path not found!")
                 .config_dir()
                 .join("saves");

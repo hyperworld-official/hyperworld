@@ -6,7 +6,7 @@ main-creating_world = Welt wird generiert
 main-tip = Tipp:
 main-unbound_key_tip = Keine Taste ausgewählt
 main-notice =
-    Wilkommen in der Alpha-Version von Veloren!
+    Wilkommen in der Alpha-Version von Hyperworld!
     
     Bevor du dich ins Abenteuer stürzt, behalte bitte einige Dinge im Hinterkopf:
     
@@ -14,14 +14,14 @@ main-notice =
     
     - Für konstruktives Feedback und Bug-Reports kannst du uns via Reddit, Gitlab oder über unseren Discord-Server kontaktieren.
     
-    - Veloren hat die GPL 3 Open-Source Lizenz. Das heißt du kannst es kostenlos spielen,
+    - Hyperworld hat die GPL 3 Open-Source Lizenz. Das heißt du kannst es kostenlos spielen,
     aber auch modifizieren (solange die Modifikation auch die selbe Lizenz trägt) und das Spiel an andere weiterschicken.
     
-    - Veloren ist ein Non-Profit Community Projekt und jeder Mitarbeiter entwickelt es als Hobby in seiner Freizeit.
+    - Hyperworld ist ein Non-Profit Community Projekt und jeder Mitarbeiter entwickelt es als Hobby in seiner Freizeit.
     
     Wenn dir die Idee gefällt, dann schließe dich doch einfach unserem Dev- oder Art-Team an!
     
-    Danke, dass du dir die Zeit genommen hast diese Zeilen zu lesen und wir hoffen, dass dir Veloren gefällt!
+    Danke, dass du dir die Zeit genommen hast diese Zeilen zu lesen und wir hoffen, dass dir Hyperworld gefällt!
     
     ~ Die Entwickler*innen
 main-login_process =
@@ -32,7 +32,7 @@ main-login_process =
     
     Du kannst deinen Account auf folgender Webseite erstellen:
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = Server nicht gefunden
 main-login-authentication_error = Authentifizierung fehlgeschlagen
 main-login-internal_error = Interner Fehler beim Client (wahrscheinlich wurde der Charakter gelöscht)
@@ -86,7 +86,7 @@ loading-tips =
     .a11 = Mit Anderen zusammen zu spielen macht noch viel mehr Spaß! Mit '{ $gameinput-social }' kannst du sehen, wer gerade online ist.
     .a12 = Mit '{ $gameinput-dance }' kannst du das Tanzbein schwingen. Party!
     .a13 = Mit '{ $gameinput-glide }' kannst du den Gleiter öffnen und hohe Lüfte erobern.
-    .a14 = Veloren ist immernoch in der Pre-Alpha. Wir tun unser Bestes, um es jeden Tag ein Stück besser zu machen!
+    .a14 = Hyperworld ist immernoch in der Pre-Alpha. Wir tun unser Bestes, um es jeden Tag ein Stück besser zu machen!
     .a15 = Du möchtest aktiv an der Entwicklung mitwirken oder einfach nur chatten? Dann komm auf unseren Discord-Server.
     .a16 = Die Art, wie dir deine Lebensenergie angezeigt wird, kannst du in den Einstellungen ändern.
     .a17 = Setze dich neben ein Lagerfeuer (drücke dafür '{ $gameinput-sit }') um dich langsam von deinen Verletzungen zu erholen.

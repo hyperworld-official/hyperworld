@@ -19,9 +19,9 @@ impl Default for NetworkingSettings {
     fn default() -> Self {
         Self {
             username: "".to_string(),
-            servers: vec!["server.veloren.net".to_string()],
-            default_server: "server.veloren.net".to_string(),
-            trusted_auth_servers: ["https://auth.veloren.net"]
+            servers: vec!["server.hyperworld.net".to_string()],
+            default_server: "server.hyperworld.net".to_string(),
+            trusted_auth_servers: ["https://auth.hyperworld.net"]
                 .iter()
                 .map(|s| s.to_string())
                 .collect(),

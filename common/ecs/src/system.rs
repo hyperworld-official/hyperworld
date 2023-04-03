@@ -213,7 +213,7 @@ pub fn gen_stats(
     result
 }
 
-/// This trait wraps around specs::System and does additional veloren tasks like
+/// This trait wraps around specs::System and does additional hyperworld tasks like
 /// metrics collection
 ///
 /// ```

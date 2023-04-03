@@ -1,7 +1,7 @@
 [package]
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
-name = "veloren-common-ecs"
+name = "hyperworld-common-ecs"
 version = "0.10.0"
 
 [features]
@@ -9,7 +9,7 @@ version = "0.10.0"
 [dependencies]
 
 tracing = { version = "0.1", default-features = false }
-common-base = { package = "veloren-common-base", path = "../base" }
+common-base = { package = "hyperworld-common-base", path = "../base" }
 
 # ECS
 specs = { version = "0.18", features = ["serde", "storage-event-control"] }

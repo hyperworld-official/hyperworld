@@ -191,7 +191,7 @@ impl Controls {
         server: Option<String>,
     ) -> Self {
         let version = common::util::DISPLAY_VERSION_LONG.clone();
-        let alpha = format!("Veloren {}", common::util::DISPLAY_VERSION.as_str());
+        let alpha = format!("Hyperworld {}", common::util::DISPLAY_VERSION.as_str());
 
         let credits = Credits::load_expect_cloned("common.credits");
 

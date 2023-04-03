@@ -3,7 +3,7 @@ use common_base::span;
 /// Pixel art scaling
 /// Note: The current ui is locked to the pixel grid with little animation, if
 /// we want smoothly moving pixel art this should be done in the shaders
-/// useful links: https://gitlab.com/veloren/veloren/issues/257
+/// useful links: https://gitlab.com/hyperworld1/hyperworld/issues/257
 use image::RgbaImage;
 use vek::*;
 

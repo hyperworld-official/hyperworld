@@ -63,7 +63,7 @@ fn main() {
             &mut None,
             &username,
             &password,
-            |provider| provider == "https://auth.veloren.net",
+            |provider| provider == "https://auth.hyperworld.net",
         ))
         .expect("Failed to create client instance");
 

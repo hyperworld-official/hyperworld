@@ -23,9 +23,9 @@ vec4 cloud_at(vec3 pos, float dist, out vec3 emission, out float not_underground
 
     // Natural attenuation of air (air naturally attenuates light that passes through it)
     // Simulate the atmosphere thinning as you get higher. Not physically accurate, but then
-    // it can't be since Veloren's world is flat, not spherical.
+    // it can't be since Hyperworld's world is flat, not spherical.
     float atmosphere_alt = CLOUD_AVG_ALT + 40000.0;
-    // Veloren's world is flat. This is, to put it mildly, somewhat non-physical. With the earth as an infinitely-big
+    // Hyperworld's world is flat. This is, to put it mildly, somewhat non-physical. With the earth as an infinitely-big
     // plane, the atmosphere is therefore capable of scattering 100% of any light source at the horizon, no matter how
     // bright, because it has to travel through an infinite amount of atmosphere. This doesn't happen in reality
     // because the earth has curvature and so there is an upper bound on the amount of atmosphere that a sunset must

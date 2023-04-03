@@ -215,7 +215,7 @@ impl<'a> System<'a> for Sys {
                     // one) action node. This makes bugfinding much easier and
                     // debugging way easier. If you don't think so, try
                     // debugging the agent code before this MR
-                    // (https://gitlab.com/veloren/veloren/-/merge_requests/1801).
+                    // (https://gitlab.com/hyperworld1/hyperworld/-/merge_requests/1801).
                     // Each tick should arrive at one (1) action node which
                     // then determines what the agent does. If this makes you
                     // uncomfortable, consider dt the response time of the

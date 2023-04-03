@@ -565,7 +565,7 @@ pub struct ItemDef {
     #[serde(default)]
     /// The string that refers to the filepath to the asset, relative to the
     /// assets folder, which the ItemDef is loaded from. The name space
-    /// prepended with `veloren.core` is reserved for veloren functions.
+    /// prepended with `hyperworld.core` is reserved for hyperworld functions.
     item_definition_id: String,
     pub name: String,
     pub description: String,
@@ -705,9 +705,9 @@ impl PartialEq for Item {
 
 impl assets::Compound for ItemDef {
     fn load(cache: assets::AnyCache, specifier: &assets::SharedString) -> Result<Self, BoxedError> {
-        if specifier.starts_with("veloren.core.") {
+        if specifier.starts_with("hyperworld.core.") {
             return Err(format!(
-                "Attempted to load an asset from a specifier reserved for core veloren functions. \
+                "Attempted to load an asset from a specifier reserved for core hyperworld functions. \
                  Specifier: {}",
                 specifier
             )
@@ -848,7 +848,7 @@ impl Item {
     /// Creates a new instance of an `Item from the provided asset identifier if
     /// it exists
     pub fn new_from_asset(asset: &str) -> Result<Self, Error> {
-        let inner_item = if asset.starts_with("veloren.core.pseudo_items.modular") {
+        let inner_item = if asset.starts_with("hyperworld.core.pseudo_items.modular") {
             ItemBase::Modular(ModularBase::load_from_pseudo_id(asset))
         } else {
             ItemBase::Simple(Arc::<ItemDef>::load_cloned(asset)?)

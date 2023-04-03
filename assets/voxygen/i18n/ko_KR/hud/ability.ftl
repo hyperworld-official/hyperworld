@@ -76,5 +76,5 @@ common-abilities-sword-reaching_flurry = 마구찌르기
     .desc = 적을 여러번 찌른다.
 common-abilities-sword-reaching_skewer = 꿰뚫기
     .desc = 앞으로 움직이며 적 여럿을 꿸수 있을 정도로 강하게 찌른다.
-veloren-core-pseudo_abilities-sword-stance_ability = 검 자세
+hyperworld-core-pseudo_abilities-sword-stance_ability = 검 자세
     .desc = 검 자세에 따라 다양한 능력으로 변한다.

@@ -1,5 +1,5 @@
 [package]
-name = "veloren-server-cli"
+name = "hyperworld-server-cli"
 version = "0.14.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>"]
 edition = "2021"
@@ -8,7 +8,7 @@ edition = "2021"
 build = true
 app = true
 longDescription = """
-Veloren is a multiplayer voxel RPG written in Rust.
+Hyperworld is a multiplayer voxel RPG written in Rust.
 It is inspired by games such as Cube World, Legend of Zelda: Breath of the Wild, Dwarf Fortress and Minecraft.
 
 This package includes the official server CLI.
@@ -27,13 +27,13 @@ hot-agent = ["server/hot-agent", "agent"]
 hot-site = ["server/hot-site", "world"]
 
 [dependencies]
-server = { package = "veloren-server", path = "../server", default-features = false, features = ["simd"] }
-agent = { package = "veloren-server-agent", path = "../server/agent", optional = true }
-common = { package = "veloren-common", path = "../common" }
-common-base = { package = "veloren-common-base", path = "../common/base" }
-common-net = { package = "veloren-common-net", path = "../common/net" }
-common-frontend = { package = "veloren-common-frontend", path = "../common/frontend" }
-world = { package = "veloren-world", path = "../world", optional = true }
+server = { package = "hyperworld-server", path = "../server", default-features = false, features = ["simd"] }
+agent = { package = "hyperworld-server-agent", path = "../server/agent", optional = true }
+common = { package = "hyperworld-common", path = "../common" }
+common-base = { package = "hyperworld-common-base", path = "../common/base" }
+common-net = { package = "hyperworld-common-net", path = "../common/net" }
+common-frontend = { package = "hyperworld-common-frontend", path = "../common/frontend" }
+world = { package = "hyperworld-world", path = "../world", optional = true }
 
 tokio = { version = "1.14", default-features = false, features = ["rt-multi-thread"] }
 num_cpus = "1.0"

@@ -12,17 +12,17 @@ common-abilities-sceptre-wardingaura = Warding Aura
     .desc = Wards your allies against enemy attacks.
 
 # Sword abilities
-veloren-core-pseudo_abilities-sword-heavy_stance = Heavy Stance
+hyperworld-core-pseudo_abilities-sword-heavy_stance = Heavy Stance
     .desc = Attacks in this stance can stagger enemies and deal more damage to staggered enemies but are slower
-veloren-core-pseudo_abilities-sword-agile_stance = Agile Stance
+hyperworld-core-pseudo_abilities-sword-agile_stance = Agile Stance
     .desc = Attacks are faster but weaker in this stance
-veloren-core-pseudo_abilities-sword-defensive_stance = Defensive Stance
+hyperworld-core-pseudo_abilities-sword-defensive_stance = Defensive Stance
     .desc = Attacks in this stance can act as either a weak block or a parry
-veloren-core-pseudo_abilities-sword-crippling_stance = Crippling Stance
+hyperworld-core-pseudo_abilities-sword-crippling_stance = Crippling Stance
     .desc = Attacks in this stance create or worsen lasting injuries
-veloren-core-pseudo_abilities-sword-cleaving_stance = Cleaving Stance
+hyperworld-core-pseudo_abilities-sword-cleaving_stance = Cleaving Stance
     .desc = Attacks in this stance can hit multiple enemies
-veloren-core-pseudo_abilities-sword-double_slash = Double Slash
+hyperworld-core-pseudo_abilities-sword-double_slash = Double Slash
     .desc = A two-hit combo.
 common-abilities-sword-basic_double_slash = Basic Double Slash
     .desc = A basic two-hit combo
@@ -36,7 +36,7 @@ common-abilities-sword-crippling_double_slash = Crippling Double Slash
     .desc = A two-hit combo that can prolong an enemy's bleeding
 common-abilities-sword-cleaving_double_slash = Cleaving Double Slash
     .desc = A two-hit combo that can cleave through multiple enemies
-veloren-core-pseudo_abilities-sword-secondary_ability = Secondary Sword Ability
+hyperworld-core-pseudo_abilities-sword-secondary_ability = Secondary Sword Ability
     .desc = The ability bound to secondary attack key
 common-abilities-sword-basic_thrust = Basic Thrust
     .desc = Charging the thrust will make it more powerful
@@ -50,7 +50,7 @@ common-abilities-sword-crippling_deep_rend = Deep Rend
     .desc = A strike aimed at an already open wound, deals more damage to bleeding enemies
 common-abilities-sword-cleaving_spiral_slash = Spiral Slash
     .desc = Sweep your blade fully around you to hit anyone nearby
-veloren-core-pseudo_abilities-sword-crescent_slash = Crescent Slash
+hyperworld-core-pseudo_abilities-sword-crescent_slash = Crescent Slash
     .desc =
         An upwards diagonal slash
         Is modified depending on your stance
@@ -66,7 +66,7 @@ common-abilities-sword-crippling_crescent_slash = Crippling Crescent Slash
     .desc = An upwards diagonal slash that can bleed
 common-abilities-sword-cleaving_crescent_slash = Cleaving Crescent Slash
     .desc = An upwards diagonal slash that can cleave through enemies
-veloren-core-pseudo_abilities-sword-fell_strike = Fell Strike
+hyperworld-core-pseudo_abilities-sword-fell_strike = Fell Strike
     .desc =
         A quick strong slash
         Is modified depending on your stance
@@ -82,7 +82,7 @@ common-abilities-sword-crippling_fell_strike = Crippling Fell Strike
     .desc = A quick strong slash that can bleed
 common-abilities-sword-cleaving_fell_strike = Cleaving Fell Strike
     .desc = A quick strong slash that can cleave through enemies
-veloren-core-pseudo_abilities-sword-skewer = Skewer
+hyperworld-core-pseudo_abilities-sword-skewer = Skewer
     .desc =
         A stabbing lunge
         Is modified depending on your stance
@@ -98,7 +98,7 @@ common-abilities-sword-crippling_skewer = Crippling Skewer
     .desc = A stabbing lunge that can bleed
 common-abilities-sword-cleaving_skewer = Cleaving Skewer
     .desc = A stabbing lunge that can cleave through enemies
-veloren-core-pseudo_abilities-sword-cascade = Cascade
+hyperworld-core-pseudo_abilities-sword-cascade = Cascade
     .desc =
         An overhead slash
         Is modified depending on your stance
@@ -114,7 +114,7 @@ common-abilities-sword-crippling_cascade = Crippling Cascade
     .desc = An overhead slash that can bleed
 common-abilities-sword-cleaving_cascade = Cleaving Cascade
     .desc = An overhead slash that can cleave through enemies
-veloren-core-pseudo_abilities-sword-cross_cut = Cross Cut
+hyperworld-core-pseudo_abilities-sword-cross_cut = Cross Cut
     .desc =
         A right and left slash
         Is modified depending on your stance
@@ -130,7 +130,7 @@ common-abilities-sword-crippling_cross_cut = Crippling Cross Cut
     .desc = A right and left slash that can bleed
 common-abilities-sword-cleaving_cross_cut = Cleaving Cross Cut
     .desc = A right and left slash which cleave through enemies
-veloren-core-pseudo_abilities-sword-finisher = Finisher
+hyperworld-core-pseudo_abilities-sword-finisher = Finisher
     .desc =
         An ability that consumes combo and is meant to end a fight
         The finisher will be different depending on your stance

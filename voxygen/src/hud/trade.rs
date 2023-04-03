@@ -199,7 +199,7 @@ impl<'a> Trade<'a> {
             (x, is_ours) if ours == is_ours => x,
             _ => check_if_us(1)?.0,
         };
-        // TODO: update in accordance with https://gitlab.com/veloren/veloren/-/issues/960
+        // TODO: update in accordance with https://gitlab.com/hyperworld1/hyperworld/-/issues/960
         let inventory = inventories.get(entity)?;
 
         // Alignment for Grid

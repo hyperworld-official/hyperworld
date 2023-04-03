@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Artem Polishchuk <ego.cordatus@gmail.com> -->
 <component type="desktop-application">
-  <id>net.veloren.veloren.desktop</id>
+  <id>net.hyperworld.hyperworld.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>Veloren</name>
+  <name>Hyperworld</name>
   <provides>
-    <binary>veloren-voxygen</binary>
+    <binary>hyperworld-voxygen</binary>
   </provides>
 
   <content_rating type="oars-1.0">
@@ -18,27 +18,27 @@
   </content_rating>
 
   <summary>
-    Veloren is a multiplayer voxel RPG written in Rust. It is inspired by games
+    Hyperworld is a multiplayer voxel RPG written in Rust. It is inspired by games
     such as Cube World, Legend of Zelda: Breath of the Wild, Dwarf Fortress and
     Minecraft.
   </summary>
   <summary xml:lang="de">
-    Veloren ist ein in Rust geschriebenes Mehrspieler Voxel RPG. Es wurde von
+    Hyperworld ist ein in Rust geschriebenes Mehrspieler Voxel RPG. Es wurde von
     Spielen wie Cube World, The Legend of Zelda: Breath of the Wild, Dwarf
     Fortress und Minecraft inspiriert.
   </summary>
 
   <description>
     <p>
-      Welcome To Veloren!
+      Welcome To Hyperworld!
     </p><p xml:lang="de">
-        Willkommen bei Veloren!
+        Willkommen bei Hyperworld!
     </p><p>
-      Veloren is a multiplayer voxel RPG written in Rust. Veloren takes
+      Hyperworld is a multiplayer voxel RPG written in Rust. Hyperworld takes
       inspiration from games such as Cube World, Minecraft and Dwarf Fortress.
       The game is currently under heavy development, but is playable.
     </p><p xml:lang="de">
-        Veloren ist ein in Rust geschriebenes Mehrspieler Voxel RPG. Es wurde
+        Hyperworld ist ein in Rust geschriebenes Mehrspieler Voxel RPG. Es wurde
         von Spielen wie Cube World, Minecraft und Dwarf Fortress inspiriert.
         Das Spiel befindet sich mommentan noch in Entwicklung, ist aber bereits
         spielbar.
@@ -93,8 +93,8 @@
     <keyword>world</keyword>
   </keywords>
 
-  <url type="bugtracker">https://gitlab.com/veloren/veloren/issues</url>
-  <url type="faq">https://gitlab.com/veloren/veloren#faq</url>
-  <url type="help">https://book.veloren.net/</url>
-  <url type="homepage">https://veloren.net</url>
+  <url type="bugtracker">https://gitlab.com/hyperworld1/hyperworld/issues</url>
+  <url type="faq">https://gitlab.com/hyperworld1/hyperworld#faq</url>
+  <url type="help">https://book.hyperworld.net/</url>
+  <url type="homepage">https://hyperworld.net</url>
 </component>

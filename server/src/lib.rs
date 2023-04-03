@@ -582,7 +582,7 @@ impl Server {
             server_constants,
         };
 
-        debug!(?settings, "created veloren server with");
+        debug!(?settings, "created hyperworld server with");
 
         let git_hash = *common::util::GIT_HASH;
         let git_date = common::util::GIT_DATE.clone();
@@ -657,7 +657,7 @@ impl Server {
             .calendar_now();
         *self.state.ecs_mut().write_resource::<Calendar>() = new_calendar;
 
-        // This tick function is the centre of the Veloren universe. Most server-side
+        // This tick function is the centre of the Hyperworld universe. Most server-side
         // things are managed from here, and as such it's important that it
         // stays organised. Please consult the core developers before making
         // significant changes to this code. Here is the approximate order of

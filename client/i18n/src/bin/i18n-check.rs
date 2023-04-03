@@ -7,7 +7,7 @@ use veloren_client_i18n::{
 
 fn main() {
     let args = Command::new("i18n-check")
-        .about("Tool to check your Veloren localisation for correctness and missing keys")
+        .about("Tool to check your Hyperworld localisation for correctness and missing keys")
         .arg(
             Arg::new("CODE")
                 .required(true)

@@ -1,7 +1,7 @@
 #![feature(drain_filter)]
 //! Network Protocol
 //!
-//! a I/O-Free protocol for the veloren network crate.
+//! a I/O-Free protocol for the hyperworld network crate.
 //! This crate defines multiple different protocols over [`UnreliableDrain`] and
 //! [`UnreliableSink`] traits, which allows it to define the behavior of a
 //! protocol separated from the actual io.

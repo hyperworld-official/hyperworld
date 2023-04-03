@@ -342,9 +342,9 @@ dependencies = [
 [[package]]
 name = "auth-common"
 version = "0.1.0"
-source = "git+https://gitlab.com/veloren/auth.git?rev=fb3dcbc4962b367253f8f2f92760ef44d2679c9a#fb3dcbc4962b367253f8f2f92760ef44d2679c9a"
+source = "git+https://gitlab.com/hyperworld1/hyperauth.git#bd2054eac65bb5c1d2edf413b347c06279417b9f"
 dependencies = [
- "rand 0.8.5",
+ "rand 0.7.3",
  "serde",
  "uuid 0.8.2",
 ]
@@ -352,17 +352,15 @@ dependencies = [
 [[package]]
 name = "authc"
 version = "1.0.0"
-source = "git+https://gitlab.com/veloren/auth.git?rev=fb3dcbc4962b367253f8f2f92760ef44d2679c9a#fb3dcbc4962b367253f8f2f92760ef44d2679c9a"
+source = "git+https://gitlab.com/hyperworld1/hyperauth.git#bd2054eac65bb5c1d2edf413b347c06279417b9f"
 dependencies = [
  "auth-common",
  "fxhash",
  "hex",
- "http",
- "hyper",
- "hyper-rustls",
+ "reqwest",
  "rust-argon2",
  "serde",
- "serde_json",
+ "url",
  "uuid 0.8.2",
 ]
 
@@ -401,6 +399,12 @@ name = "bare-metal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8fe8f5a8a398345e52358e18ff07cc17a568fbca5c6f73873d3a62056309603"
+
+[[package]]
+name = "base64"
+version = "0.12.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3441f0f7b02788e948e47f457ca01f1d7e6d92c693bc132c22b087d3141c03ff"
 
 [[package]]
 name = "base64"
@@ -571,6 +575,12 @@ name = "byteorder"
 version = "1.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
+
+[[package]]
+name = "bytes"
+version = "0.5.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0e4cec68f03f32e44924783795810fa50a7035d8c8ebe78580ad7e6c703fba38"
 
 [[package]]
 name = "bytes"
@@ -901,7 +911,7 @@ version = "4.6.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "35ed6e9d84f0b51a7f52daf1c7d71dd136fd7a3f41a8462b8cdb8c78d920fad4"
 dependencies = [
- "bytes",
+ "bytes 1.2.1",
  "memchr",
 ]
 
@@ -1266,7 +1276,7 @@ dependencies = [
  "serde_derive",
  "serde_json",
  "tinytemplate",
- "tokio",
+ "tokio 1.20.0",
  "walkdir 2.3.2",
 ]
 
@@ -1487,15 +1497,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ct-logs"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c1a816186fa68d9e426e3cb4ae4dff1fcd8e4a2c34b781bf7a822574a0d0aac8"
-dependencies = [
- "sct 0.6.1",
-]
-
-[[package]]
 name = "cty"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1676,7 +1677,7 @@ dependencies = [
  "anyhow",
  "app_dirs2",
  "async-trait",
- "base64",
+ "base64 0.13.0",
  "bitflags",
  "crossbeam-channel",
  "num-traits",
@@ -1686,10 +1687,10 @@ dependencies = [
  "serde_repr",
  "thiserror",
  "time 0.3.14",
- "tokio",
+ "tokio 1.20.0",
  "tracing",
  "url",
- "winreg",
+ "winreg 0.10.1",
 ]
 
 [[package]]
@@ -1795,6 +1796,15 @@ checksum = "35949884794ad573cf46071e41c9b60efb0cb311e3ca01f7af807af1debc66ff"
 dependencies = [
  "nb 0.1.3",
  "void",
+]
+
+[[package]]
+name = "encoding_rs"
+version = "0.8.32"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "071a31f4ee85403370b58aca746f01041ede6f0da2730960ad001edc2b71b394"
+dependencies = [
+ "cfg-if 1.0.0",
 ]
 
 [[package]]
@@ -2139,6 +2149,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "fuchsia-zircon"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2e9763c69ebaae630ba35f74888db465e49e259ba1bc0eda7d06f4a067615d82"
+dependencies = [
+ "bitflags",
+ "fuchsia-zircon-sys",
+]
+
+[[package]]
+name = "fuchsia-zircon-sys"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3dcaa9ae7725d12cdb85b3ad99a434db70b468c09ded17e012d86b5c1010f7a7"
+
+[[package]]
 name = "funty"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2229,7 +2255,7 @@ dependencies = [
  "futures-sink",
  "futures-task",
  "memchr",
- "pin-project-lite",
+ "pin-project-lite 0.2.9",
  "pin-utils",
  "slab",
 ]
@@ -2629,11 +2655,11 @@ dependencies = [
 
 [[package]]
 name = "h2"
-version = "0.3.14"
+version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ca32592cf21ac7ccab1825cd87f6c9b3d9022c44d086172ed0966bec8af30be"
+checksum = "5e4728fd124914ad25e99e3d15a9361a879f6620f63cb56bbb08f95abb97a535"
 dependencies = [
- "bytes",
+ "bytes 0.5.6",
  "fnv",
  "futures-core",
  "futures-sink",
@@ -2641,9 +2667,10 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio",
+ "tokio 0.2.25",
  "tokio-util",
  "tracing",
+ "tracing-futures",
 ]
 
 [[package]]
@@ -2779,9 +2806,19 @@ version = "0.2.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75f43d41e26995c17e71ee126451dd3941010b0514a81a9d11f3b341debc2399"
 dependencies = [
- "bytes",
+ "bytes 1.2.1",
  "fnv",
  "itoa 1.0.3",
+]
+
+[[package]]
+name = "http-body"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13d5ff830006f7646652e057693569bfe0d51760c0085a071769d142a205111b"
+dependencies = [
+ "bytes 0.5.6",
+ "http",
 ]
 
 [[package]]
@@ -2790,9 +2827,9 @@ version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d5f38f16d184e36f2408a55281cd658ecbd3ca05cce6d6510a176eca393e26d1"
 dependencies = [
- "bytes",
+ "bytes 1.2.1",
  "http",
- "pin-project-lite",
+ "pin-project-lite 0.2.9",
 ]
 
 [[package]]
@@ -2800,6 +2837,12 @@ name = "httparse"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d897f394bad6a705d5f4104762e116a75639e470d80901eed05a860a95cb1904"
+
+[[package]]
+name = "httpdate"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "494b4d60369511e7dea41cf646832512a94e542f68bb9c49e54518e0f468eb47"
 
 [[package]]
 name = "httpdate"
@@ -2815,23 +2858,46 @@ checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
 
 [[package]]
 name = "hyper"
-version = "0.14.20"
+version = "0.13.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02c929dc5c39e335a03c405292728118860721b10190d98c2a0f0efd5baafbac"
+checksum = "8a6f157065790a3ed2f88679250419b5cdd96e714a0d65f7797fd337186e96bb"
 dependencies = [
- "bytes",
+ "bytes 0.5.6",
  "futures-channel",
  "futures-core",
  "futures-util",
  "h2",
  "http",
- "http-body",
+ "http-body 0.3.1",
  "httparse",
- "httpdate",
+ "httpdate 0.3.2",
+ "itoa 0.4.8",
+ "pin-project",
+ "socket2 0.3.19",
+ "tokio 0.2.25",
+ "tower-service",
+ "tracing",
+ "want",
+]
+
+[[package]]
+name = "hyper"
+version = "0.14.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "02c929dc5c39e335a03c405292728118860721b10190d98c2a0f0efd5baafbac"
+dependencies = [
+ "bytes 1.2.1",
+ "futures-channel",
+ "futures-core",
+ "futures-util",
+ "http",
+ "http-body 0.4.5",
+ "httparse",
+ "httpdate 1.0.2",
  "itoa 1.0.3",
- "pin-project-lite",
- "socket2",
- "tokio",
+ "pin-project-lite 0.2.9",
+ "socket2 0.4.7",
+ "tokio 1.20.0",
  "tower-service",
  "tracing",
  "want",
@@ -2839,19 +2905,574 @@ dependencies = [
 
 [[package]]
 name = "hyper-rustls"
-version = "0.22.1"
+version = "0.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f9f7a97316d44c0af9b0301e65010573a853a9fc97046d7331d7f6bc0fd5a64"
+checksum = "37743cc83e8ee85eacfce90f2f4102030d9ff0a95244098d781e9bee4a90abb6"
 dependencies = [
- "ct-logs",
+ "bytes 0.5.6",
  "futures-util",
- "hyper",
+ "hyper 0.13.10",
  "log",
- "rustls 0.19.1",
- "rustls-native-certs 0.5.0",
- "tokio",
+ "rustls 0.18.1",
+ "tokio 0.2.25",
  "tokio-rustls",
  "webpki 0.21.4",
+]
+
+[[package]]
+name = "hyperworld-client"
+version = "0.14.0"
+dependencies = [
+ "async-channel",
+ "authc",
+ "byteorder",
+ "clap 3.2.22",
+ "hashbrown 0.12.3",
+ "hyperworld-client-i18n",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-ecs",
+ "hyperworld-common-frontend",
+ "hyperworld-common-net",
+ "hyperworld-common-state",
+ "hyperworld-common-systems",
+ "hyperworld-network",
+ "hyperworld-voxygen-i18n-helpers",
+ "image",
+ "num 0.4.0",
+ "quinn",
+ "rayon",
+ "ron 0.8.0",
+ "rustyline",
+ "serde",
+ "specs",
+ "structopt",
+ "termcolor",
+ "tokio 1.20.0",
+ "tracing",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-client-i18n"
+version = "0.13.0"
+dependencies = [
+ "clap 3.2.22",
+ "deunicode",
+ "fluent",
+ "fluent-bundle",
+ "fluent-syntax",
+ "hashbrown 0.12.3",
+ "hyperworld-common-assets",
+ "intl-memoizer",
+ "ron 0.8.0",
+ "serde",
+ "tracing",
+ "unic-langid",
+]
+
+[[package]]
+name = "hyperworld-common"
+version = "0.10.0"
+dependencies = [
+ "approx 0.4.0",
+ "bitflags",
+ "cfg-if 1.0.0",
+ "chrono",
+ "chrono-tz",
+ "clap 2.34.0",
+ "criterion",
+ "crossbeam-channel",
+ "crossbeam-utils 0.8.11",
+ "csv",
+ "dot_vox",
+ "fxhash",
+ "hashbrown 0.12.3",
+ "hyperworld-common-assets",
+ "hyperworld-common-base",
+ "indexmap",
+ "itertools",
+ "kiddo 0.1.7",
+ "lazy_static",
+ "num-derive",
+ "num-traits",
+ "ordered-float 2.10.0",
+ "petgraph 0.6.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
+ "rayon",
+ "ron 0.7.1",
+ "roots",
+ "serde",
+ "serde_json",
+ "serde_repr",
+ "sha2",
+ "slab",
+ "slotmap 1.0.6",
+ "specs",
+ "spin_sleep",
+ "structopt",
+ "strum",
+ "tracing",
+ "tracing-subscriber",
+ "uuid 0.8.2",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-common-assets"
+version = "0.10.0"
+dependencies = [
+ "assets_manager",
+ "dot_vox",
+ "image",
+ "lazy_static",
+ "ron 0.8.0",
+ "serde",
+ "tracing",
+ "walkdir 2.3.2",
+ "wavefront",
+]
+
+[[package]]
+name = "hyperworld-common-base"
+version = "0.10.0"
+dependencies = [
+ "directories-next",
+ "tracing",
+ "tracy-client",
+]
+
+[[package]]
+name = "hyperworld-common-dynlib"
+version = "0.1.0"
+dependencies = [
+ "find_folder",
+ "libloading 0.7.3",
+ "notify",
+ "tracing",
+]
+
+[[package]]
+name = "hyperworld-common-ecs"
+version = "0.10.0"
+dependencies = [
+ "float-cmp",
+ "hyperworld-common-base",
+ "specs",
+ "tracing",
+]
+
+[[package]]
+name = "hyperworld-common-frontend"
+version = "0.10.0"
+dependencies = [
+ "hyperworld-common-base",
+ "termcolor",
+ "tracing",
+ "tracing-appender",
+ "tracing-log",
+ "tracing-subscriber",
+ "tracing-tracy",
+]
+
+[[package]]
+name = "hyperworld-common-net"
+version = "0.10.0"
+dependencies = [
+ "bincode",
+ "flate2",
+ "hashbrown 0.12.3",
+ "hyperworld-common",
+ "image",
+ "num-traits",
+ "serde",
+ "specs",
+ "sum_type",
+ "tracing",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-common-state"
+version = "0.10.0"
+dependencies = [
+ "bincode",
+ "hashbrown 0.12.3",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-ecs",
+ "hyperworld-common-net",
+ "hyperworld-plugin-api",
+ "num_cpus",
+ "rayon",
+ "scopeguard",
+ "serde",
+ "specs",
+ "tar",
+ "timer-queue",
+ "toml",
+ "tracing",
+ "vek 0.15.8",
+ "wasmer",
+]
+
+[[package]]
+name = "hyperworld-common-systems"
+version = "0.10.0"
+dependencies = [
+ "hashbrown 0.12.3",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-ecs",
+ "hyperworld-common-net",
+ "hyperworld-common-state",
+ "indexmap",
+ "itertools",
+ "ordered-float 3.1.0",
+ "rand 0.8.5",
+ "rayon",
+ "slab",
+ "specs",
+ "tracing",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-network"
+version = "0.3.0"
+dependencies = [
+ "async-channel",
+ "async-trait",
+ "bincode",
+ "bitflags",
+ "bytes 1.2.1",
+ "clap 3.2.22",
+ "criterion",
+ "crossbeam-channel",
+ "futures-core",
+ "futures-util",
+ "hashbrown 0.12.3",
+ "hyperworld-network-protocol",
+ "lazy_static",
+ "lz-fear",
+ "prometheus",
+ "prometheus-hyper",
+ "quinn",
+ "rand 0.8.5",
+ "rcgen",
+ "rustls 0.20.6",
+ "serde",
+ "shellexpand",
+ "socket2 0.4.7",
+ "tokio 1.20.0",
+ "tokio-stream",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "hyperworld-network-protocol"
+version = "0.6.1"
+dependencies = [
+ "async-channel",
+ "async-trait",
+ "bitflags",
+ "bytes 1.2.1",
+ "criterion",
+ "hashbrown 0.12.3",
+ "prometheus",
+ "rand 0.8.5",
+ "tokio 1.20.0",
+ "tracing",
+]
+
+[[package]]
+name = "hyperworld-plugin-api"
+version = "0.1.0"
+dependencies = [
+ "bincode",
+ "hyperworld-common",
+ "serde",
+]
+
+[[package]]
+name = "hyperworld-plugin-derive"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2 1.0.43",
+ "quote 1.0.21",
+ "syn 1.0.100",
+]
+
+[[package]]
+name = "hyperworld-plugin-rt"
+version = "0.1.0"
+dependencies = [
+ "bincode",
+ "hyperworld-plugin-api",
+ "hyperworld-plugin-derive",
+ "serde",
+]
+
+[[package]]
+name = "hyperworld-server"
+version = "0.14.0"
+dependencies = [
+ "atomicwrites",
+ "authc",
+ "bincode",
+ "censor",
+ "chrono",
+ "chrono-tz",
+ "crossbeam-channel",
+ "drop_guard",
+ "enumset",
+ "futures-util",
+ "hashbrown 0.12.3",
+ "humantime",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-ecs",
+ "hyperworld-common-net",
+ "hyperworld-common-state",
+ "hyperworld-common-systems",
+ "hyperworld-network",
+ "hyperworld-plugin-api",
+ "hyperworld-server-agent",
+ "hyperworld-world",
+ "itertools",
+ "lazy_static",
+ "noise",
+ "num_cpus",
+ "parking_lot 0.12.0",
+ "portpicker",
+ "prometheus",
+ "prometheus-hyper",
+ "quinn",
+ "rand 0.8.5",
+ "rand_distr",
+ "rayon",
+ "refinery",
+ "ron 0.8.0",
+ "rusqlite",
+ "rustls 0.20.6",
+ "rustls-pemfile 1.0.1",
+ "serde",
+ "serde_json",
+ "slab",
+ "specs",
+ "strum",
+ "tokio 1.20.0",
+ "tracing",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-server-agent"
+version = "0.1.0"
+dependencies = [
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-dynlib",
+ "hyperworld-common-ecs",
+ "itertools",
+ "lazy_static",
+ "rand 0.8.5",
+ "specs",
+ "tracing",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-server-cli"
+version = "0.14.0"
+dependencies = [
+ "ansi-parser",
+ "clap 3.2.22",
+ "crossterm 0.25.0",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-frontend",
+ "hyperworld-common-net",
+ "hyperworld-server",
+ "hyperworld-server-agent",
+ "hyperworld-world",
+ "lazy_static",
+ "mimalloc",
+ "num_cpus",
+ "ron 0.8.0",
+ "serde",
+ "shell-words",
+ "signal-hook 0.3.14",
+ "tokio 1.20.0",
+ "tracing",
+ "tui",
+]
+
+[[package]]
+name = "hyperworld-voxygen"
+version = "0.14.0"
+dependencies = [
+ "assets_manager",
+ "backtrace",
+ "bincode",
+ "bytemuck",
+ "chrono",
+ "chumsky",
+ "clap 3.2.22",
+ "cmake",
+ "conrod_core",
+ "conrod_winit",
+ "copy_dir",
+ "cpal 0.14.0",
+ "criterion",
+ "crossbeam-channel",
+ "crossbeam-utils 0.8.11",
+ "directories-next",
+ "discord-sdk",
+ "dispatch 0.1.4",
+ "dot_vox",
+ "egui",
+ "egui_wgpu_backend",
+ "egui_winit_platform",
+ "enum-iterator 1.1.3",
+ "etagere",
+ "euc",
+ "gilrs",
+ "glyph_brush",
+ "guillotiere",
+ "hashbrown 0.12.3",
+ "hyperworld-client",
+ "hyperworld-client-i18n",
+ "hyperworld-common",
+ "hyperworld-common-assets",
+ "hyperworld-common-base",
+ "hyperworld-common-ecs",
+ "hyperworld-common-frontend",
+ "hyperworld-common-net",
+ "hyperworld-common-state",
+ "hyperworld-common-systems",
+ "hyperworld-server",
+ "hyperworld-voxygen-anim",
+ "hyperworld-voxygen-egui",
+ "hyperworld-voxygen-i18n-helpers",
+ "hyperworld-world",
+ "iced_native",
+ "iced_winit",
+ "image",
+ "inline_tweak",
+ "itertools",
+ "keyboard-keynames",
+ "lazy_static",
+ "levenshtein",
+ "mimalloc",
+ "mumble-link",
+ "native-dialog",
+ "num 0.4.0",
+ "num_cpus",
+ "ordered-float 3.1.0",
+ "profiling",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
+ "rayon",
+ "rodio",
+ "ron 0.8.0",
+ "serde",
+ "shaderc",
+ "slab",
+ "specs",
+ "strum",
+ "tokio 1.20.0",
+ "tracing",
+ "treeculler",
+ "vek 0.15.8",
+ "wgpu",
+ "wgpu-profiler",
+ "window_clipboard",
+ "winit",
+ "winres",
+]
+
+[[package]]
+name = "hyperworld-voxygen-anim"
+version = "0.10.0"
+dependencies = [
+ "bytemuck",
+ "hyperworld-common",
+ "hyperworld-common-dynlib",
+ "lazy_static",
+ "vek 0.15.8",
+]
+
+[[package]]
+name = "hyperworld-voxygen-egui"
+version = "0.9.0"
+dependencies = [
+ "egui",
+ "egui_winit_platform",
+ "hyperworld-client",
+ "hyperworld-common",
+ "hyperworld-common-dynlib",
+ "lazy_static",
+]
+
+[[package]]
+name = "hyperworld-voxygen-i18n-helpers"
+version = "0.10.0"
+dependencies = [
+ "hyperworld-client-i18n",
+ "hyperworld-common",
+ "hyperworld-common-net",
+ "tracing",
+]
+
+[[package]]
+name = "hyperworld-world"
+version = "0.10.0"
+dependencies = [
+ "arr_macro",
+ "bincode",
+ "bitvec",
+ "clap 3.2.22",
+ "criterion",
+ "csv",
+ "deflate",
+ "enum-iterator 1.1.3",
+ "fallible-iterator",
+ "flate2",
+ "fxhash",
+ "hashbrown 0.12.3",
+ "hyperworld-common",
+ "hyperworld-common-base",
+ "hyperworld-common-dynlib",
+ "hyperworld-common-frontend",
+ "hyperworld-common-net",
+ "image",
+ "inline_tweak",
+ "itertools",
+ "kiddo 0.2.4",
+ "lazy_static",
+ "lz-fear",
+ "minifb",
+ "noise",
+ "num 0.4.0",
+ "num-traits",
+ "ordered-float 3.1.0",
+ "packed_simd_2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
+ "rayon",
+ "ron 0.8.0",
+ "rstar",
+ "rusqlite",
+ "serde",
+ "structopt",
+ "strum",
+ "svg_fmt",
+ "tracing",
+ "tracing-subscriber",
+ "vek 0.15.8",
 ]
 
 [[package]]
@@ -3055,6 +3676,21 @@ name = "io-lifetimes"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec58677acfea8a15352d42fc87d11d63596ade9239e0a7c9352914417515dbe6"
+
+[[package]]
+name = "iovec"
+version = "0.1.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b2b3ea6ff95e175473f8ffe6a7eb7c00d054240321b84c57051175fe3c1e075e"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "ipnet"
+version = "2.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "12b6ee2129af8d4fb011108c73d99a1b83a85977f23b82460c0ae2e25bb4b57f"
 
 [[package]]
 name = "itertools"
@@ -3487,6 +4123,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "mime"
+version = "0.3.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6877bb514081ee2a7ff5ef9de3281f14a4dd4bceac4c09388074a6b5df8a139a"
+
+[[package]]
+name = "mime_guess"
+version = "2.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4192263c238a5f0d0c6bfd21f336a313a4ce1c450542449ca191bb657b4642ef"
+dependencies = [
+ "mime",
+ "unicase",
+]
+
+[[package]]
 name = "minifb"
 version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3529,13 +4181,32 @@ dependencies = [
 
 [[package]]
 name = "mio"
+version = "0.6.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4afd66f5b91bf2a3bc13fad0e21caedac168ca4c707504e75585648ae80e4cc4"
+dependencies = [
+ "cfg-if 0.1.10",
+ "fuchsia-zircon",
+ "fuchsia-zircon-sys",
+ "iovec",
+ "kernel32-sys",
+ "libc",
+ "log",
+ "miow 0.2.2",
+ "net2",
+ "slab",
+ "winapi 0.2.8",
+]
+
+[[package]]
+name = "mio"
 version = "0.7.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8067b404fe97c70829f082dec8bcf4f71225d7eaea1d8645349cb76fa06205cc"
 dependencies = [
  "libc",
  "log",
- "miow",
+ "miow 0.3.7",
  "ntapi",
  "winapi 0.3.9",
 ]
@@ -3548,7 +4219,7 @@ checksum = "52da4364ffb0e4fe33a9841a98a3f3014fb964045ce4f7a45a398243c8d6b0c9"
 dependencies = [
  "libc",
  "log",
- "miow",
+ "miow 0.3.7",
  "ntapi",
  "wasi 0.11.0+wasi-snapshot-preview1",
  "winapi 0.3.9",
@@ -3564,6 +4235,18 @@ dependencies = [
  "crossbeam-queue",
  "log",
  "mio 0.7.14",
+]
+
+[[package]]
+name = "miow"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ebd808424166322d4a38da87083bfddd3ac4c131334ed55856112eb06d46944d"
+dependencies = [
+ "kernel32-sys",
+ "net2",
+ "winapi 0.2.8",
+ "ws2_32-sys",
 ]
 
 [[package]]
@@ -3772,6 +4455,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "21d83ec9c63ec5bf950200a8e508bdad6659972187b625469f58ef8c08e29046"
 dependencies = [
  "jni-sys",
+]
+
+[[package]]
+name = "net2"
+version = "0.2.38"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "74d0df99cfcd2530b2e694f6e17e7f37b8e26bb23983ac530c0c97408837c631"
+dependencies = [
+ "cfg-if 0.1.10",
+ "libc",
+ "winapi 0.3.9",
 ]
 
 [[package]]
@@ -4378,7 +5072,7 @@ version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "03c64931a1a212348ec4f3b4362585eca7159d0d09cbdf4a7f74f02173596fd4"
 dependencies = [
- "base64",
+ "base64 0.13.0",
 ]
 
 [[package]]
@@ -4454,6 +5148,32 @@ dependencies = [
  "siphasher",
  "uncased",
 ]
+
+[[package]]
+name = "pin-project"
+version = "1.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad29a609b6bcd67fee905812e544992d216af9d755757c05ed2d0e15a74c6ecc"
+dependencies = [
+ "pin-project-internal",
+]
+
+[[package]]
+name = "pin-project-internal"
+version = "1.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "069bdb1e05adc7a8990dce9cc75370895fbe4e3d58b9b73bf1aee56359344a55"
+dependencies = [
+ "proc-macro2 1.0.43",
+ "quote 1.0.21",
+ "syn 1.0.100",
+]
+
+[[package]]
+name = "pin-project-lite"
+version = "0.1.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "257b64915a082f7811703966789728173279bdebb956b143dbcd23f6f970a777"
 
 [[package]]
 name = "pin-project-lite"
@@ -4662,9 +5382,9 @@ version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "18fc98d5705a20b11f8b240c0857167b79852ba469f9faec6df0027e576e676e"
 dependencies = [
- "hyper",
+ "hyper 0.14.20",
  "prometheus",
- "tokio",
+ "tokio 1.20.0",
  "tracing",
 ]
 
@@ -4703,7 +5423,7 @@ version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5b435e71d9bfa0d8889927231970c51fb89c58fa63bffcab117c9c7a41e5ef8f"
 dependencies = [
- "bytes",
+ "bytes 1.2.1",
  "futures-channel",
  "futures-util",
  "fxhash",
@@ -4711,7 +5431,7 @@ dependencies = [
  "quinn-udp",
  "rustls 0.20.6",
  "thiserror",
- "tokio",
+ "tokio 1.20.0",
  "tracing",
  "webpki 0.22.0",
 ]
@@ -4722,12 +5442,12 @@ version = "0.8.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3fce546b9688f767a57530652488420d419a8b1f44a478b451c3d1ab6d992a55"
 dependencies = [
- "bytes",
+ "bytes 1.2.1",
  "fxhash",
  "rand 0.8.5",
  "ring",
  "rustls 0.20.6",
- "rustls-native-certs 0.6.2",
+ "rustls-native-certs",
  "rustls-pemfile 0.2.1",
  "slab",
  "thiserror",
@@ -4745,8 +5465,8 @@ dependencies = [
  "futures-util",
  "libc",
  "quinn-proto",
- "socket2",
- "tokio",
+ "socket2 0.4.7",
+ "tokio 1.20.0",
  "tracing",
 ]
 
@@ -5084,6 +5804,43 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1382d1f0a252c4bf97dc20d979a2fdd05b024acd7c2ed0f7595d7817666a157"
 
 [[package]]
+name = "reqwest"
+version = "0.10.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0718f81a8e14c4dbb3b34cf23dc6aaf9ab8a0dfec160c534b3dbca1aaa21f47c"
+dependencies = [
+ "base64 0.13.0",
+ "bytes 0.5.6",
+ "encoding_rs",
+ "futures-core",
+ "futures-util",
+ "http",
+ "http-body 0.3.1",
+ "hyper 0.13.10",
+ "hyper-rustls",
+ "ipnet",
+ "js-sys",
+ "lazy_static",
+ "log",
+ "mime",
+ "mime_guess",
+ "percent-encoding",
+ "pin-project-lite 0.2.9",
+ "rustls 0.18.1",
+ "serde",
+ "serde_json",
+ "serde_urlencoded",
+ "tokio 0.2.25",
+ "tokio-rustls",
+ "url",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+ "webpki-roots",
+ "winreg 0.7.0",
+]
+
+[[package]]
 name = "ring"
 version = "0.16.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5160,7 +5917,7 @@ version = "0.6.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "86018df177b1beef6c7c8ef949969c4f7cb9a9344181b92486b23c79995bdaa4"
 dependencies = [
- "base64",
+ "base64 0.13.0",
  "bitflags",
  "serde",
 ]
@@ -5171,7 +5928,7 @@ version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "88073939a61e5b7680558e6be56b419e208420c2adb92be54921fa6b72283f1a"
 dependencies = [
- "base64",
+ "base64 0.13.0",
  "bitflags",
  "serde",
 ]
@@ -5182,7 +5939,7 @@ version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "300a51053b1cb55c80b7a9fde4120726ddf25ca241a1cbb926626f62fb136bff"
 dependencies = [
- "base64",
+ "base64 0.13.0",
  "bitflags",
  "serde",
 ]
@@ -5244,7 +6001,7 @@ version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4b18820d944b33caa75a71378964ac46f58517c92b6ae5f762636247c09e78fb"
 dependencies = [
- "base64",
+ "base64 0.13.0",
  "blake2b_simd",
  "constant_time_eq",
 ]
@@ -5295,11 +6052,11 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.19.1"
+version = "0.18.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "35edb675feee39aec9c99fa5ff985081995a06d594114ae14cbe797ad7b7a6d7"
+checksum = "5d1126dcf58e93cee7d098dbda643b5f92ed724f1f6a63007c1116eed6700c81"
 dependencies = [
- "base64",
+ "base64 0.12.3",
  "log",
  "ring",
  "sct 0.6.1",
@@ -5320,18 +6077,6 @@ dependencies = [
 
 [[package]]
 name = "rustls-native-certs"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a07b7c1885bd8ed3831c289b7870b13ef46fe0e856d288c30d9cc17d75a2092"
-dependencies = [
- "openssl-probe",
- "rustls 0.19.1",
- "schannel",
- "security-framework",
-]
-
-[[package]]
-name = "rustls-native-certs"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0167bac7a9f490495f3c33013e7722b53cb087ecbe082fb0c6387c96f634ea50"
@@ -5348,7 +6093,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5eebeaeb360c87bfb72e84abdb3447159c0eaececf1bef2aecd65a8be949d1c9"
 dependencies = [
- "base64",
+ "base64 0.13.0",
 ]
 
 [[package]]
@@ -5357,7 +6102,7 @@ version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0864aeff53f8c05aa08d86e5ef839d3dfcf07aeba2db32f12db0ef716e87bd55"
 dependencies = [
- "base64",
+ "base64 0.13.0",
 ]
 
 [[package]]
@@ -5624,6 +6369,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_urlencoded"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3491c14715ca2294c4d6a88f15e84739788c1d030eed8c110436aafdaa2f3fd"
+dependencies = [
+ "form_urlencoded",
+ "itoa 1.0.3",
+ "ryu",
+ "serde",
+]
+
+[[package]]
 name = "sha2"
 version = "0.10.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5838,6 +6595,17 @@ checksum = "0a345c870a1fae0b1b779085e81b51e614767c239e93503588e54c5b17f4b0e8"
 dependencies = [
  "smithay-client-toolkit 0.16.0",
  "wayland-client 0.29.5",
+]
+
+[[package]]
+name = "socket2"
+version = "0.3.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "122e570113d28d773067fab24266b66753f6ea915758651696b6e35e49f88d6e"
+dependencies = [
+ "cfg-if 1.0.0",
+ "libc",
+ "winapi 0.3.9",
 ]
 
 [[package]]
@@ -6234,20 +7002,38 @@ checksum = "cda74da7e1a664f795bb1f8a87ec406fb89a02522cf6e50620d016add6dbbf5c"
 
 [[package]]
 name = "tokio"
+version = "0.2.25"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6703a273949a90131b290be1fe7b039d0fc884aa1935860dfcbe056f28cd8092"
+dependencies = [
+ "bytes 0.5.6",
+ "fnv",
+ "futures-core",
+ "iovec",
+ "lazy_static",
+ "memchr",
+ "mio 0.6.23",
+ "num_cpus",
+ "pin-project-lite 0.1.12",
+ "slab",
+]
+
+[[package]]
+name = "tokio"
 version = "1.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57aec3cfa4c296db7255446efb4928a6be304b431a806216105542a67b6ca82e"
 dependencies = [
  "autocfg",
- "bytes",
+ "bytes 1.2.1",
  "libc",
  "memchr",
  "mio 0.8.2",
  "num_cpus",
  "once_cell",
- "pin-project-lite",
+ "pin-project-lite 0.2.9",
  "signal-hook-registry",
- "socket2",
+ "socket2 0.4.7",
  "tokio-macros",
  "winapi 0.3.9",
 ]
@@ -6265,12 +7051,13 @@ dependencies = [
 
 [[package]]
 name = "tokio-rustls"
-version = "0.22.0"
+version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc6844de72e57df1980054b38be3a9f4702aba4858be64dd700181a8a6d0e1b6"
+checksum = "e12831b255bcfa39dc0436b01e19fea231a37db570686c06ee72c423479f889a"
 dependencies = [
- "rustls 0.19.1",
- "tokio",
+ "futures-core",
+ "rustls 0.18.1",
+ "tokio 0.2.25",
  "webpki 0.21.4",
 ]
 
@@ -6281,22 +7068,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f6edf2d6bc038a43d31353570e27270603f4648d18f5ed10c0e179abe43255af"
 dependencies = [
  "futures-core",
- "pin-project-lite",
- "tokio",
+ "pin-project-lite 0.2.9",
+ "tokio 1.20.0",
 ]
 
 [[package]]
 name = "tokio-util"
-version = "0.7.1"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0edfdeb067411dba2044da6d1cb2df793dd35add7888d73c16e3381ded401764"
+checksum = "be8242891f2b6cbef26a2d7e8605133c2c554cd35b3e4948ea892d6d68436499"
 dependencies = [
- "bytes",
+ "bytes 0.5.6",
  "futures-core",
  "futures-sink",
- "pin-project-lite",
- "tokio",
- "tracing",
+ "log",
+ "pin-project-lite 0.1.12",
+ "tokio 0.2.25",
 ]
 
 [[package]]
@@ -6322,7 +7109,7 @@ checksum = "2fce9567bd60a67d08a16488756721ba392f24f29006402881e43b19aac64307"
 dependencies = [
  "cfg-if 1.0.0",
  "log",
- "pin-project-lite",
+ "pin-project-lite 0.2.9",
  "tracing-attributes",
  "tracing-core",
 ]
@@ -6357,6 +7144,16 @@ checksum = "5aeea4303076558a00714b823f9ad67d58a3bbda1df83d8827d21193156e22f7"
 dependencies = [
  "once_cell",
  "valuable",
+]
+
+[[package]]
+name = "tracing-futures"
+version = "0.2.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "97d095ae15e245a057c8e8451bab9b3ee1e1f68e9ba2b4fbc18d0ac5237835f2"
+dependencies = [
+ "pin-project",
+ "tracing",
 ]
 
 [[package]]
@@ -6529,6 +7326,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "unicase"
+version = "2.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "50f37be617794602aabbeee0be4f259dc1778fabe05e2d67ee8f79326d5cb4f6"
+dependencies = [
+ "version_check 0.9.4",
+]
+
+[[package]]
 name = "unicode-bidi"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6658,562 +7464,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "veloren-client"
-version = "0.14.0"
-dependencies = [
- "async-channel",
- "authc",
- "byteorder",
- "clap 3.2.22",
- "hashbrown 0.12.3",
- "image",
- "num 0.4.0",
- "quinn",
- "rayon",
- "ron 0.8.0",
- "rustyline",
- "serde",
- "specs",
- "structopt",
- "termcolor",
- "tokio",
- "tracing",
- "vek 0.15.8",
- "veloren-client-i18n",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-ecs",
- "veloren-common-frontend",
- "veloren-common-net",
- "veloren-common-state",
- "veloren-common-systems",
- "veloren-network",
- "veloren-voxygen-i18n-helpers",
-]
-
-[[package]]
-name = "veloren-client-i18n"
-version = "0.13.0"
-dependencies = [
- "clap 3.2.22",
- "deunicode",
- "fluent",
- "fluent-bundle",
- "fluent-syntax",
- "hashbrown 0.12.3",
- "intl-memoizer",
- "ron 0.8.0",
- "serde",
- "tracing",
- "unic-langid",
- "veloren-common-assets",
-]
-
-[[package]]
-name = "veloren-common"
-version = "0.10.0"
-dependencies = [
- "approx 0.4.0",
- "bitflags",
- "cfg-if 1.0.0",
- "chrono",
- "chrono-tz",
- "clap 2.34.0",
- "criterion",
- "crossbeam-channel",
- "crossbeam-utils 0.8.11",
- "csv",
- "dot_vox",
- "fxhash",
- "hashbrown 0.12.3",
- "indexmap",
- "itertools",
- "kiddo 0.1.7",
- "lazy_static",
- "num-derive",
- "num-traits",
- "ordered-float 2.10.0",
- "petgraph 0.6.2",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
- "rayon",
- "ron 0.7.1",
- "roots",
- "serde",
- "serde_json",
- "serde_repr",
- "sha2",
- "slab",
- "slotmap 1.0.6",
- "specs",
- "spin_sleep",
- "structopt",
- "strum",
- "tracing",
- "tracing-subscriber",
- "uuid 0.8.2",
- "vek 0.15.8",
- "veloren-common-assets",
- "veloren-common-base",
-]
-
-[[package]]
-name = "veloren-common-assets"
-version = "0.10.0"
-dependencies = [
- "assets_manager",
- "dot_vox",
- "image",
- "lazy_static",
- "ron 0.8.0",
- "serde",
- "tracing",
- "walkdir 2.3.2",
- "wavefront",
-]
-
-[[package]]
-name = "veloren-common-base"
-version = "0.10.0"
-dependencies = [
- "directories-next",
- "tracing",
- "tracy-client",
-]
-
-[[package]]
-name = "veloren-common-dynlib"
-version = "0.1.0"
-dependencies = [
- "find_folder",
- "libloading 0.7.3",
- "notify",
- "tracing",
-]
-
-[[package]]
-name = "veloren-common-ecs"
-version = "0.10.0"
-dependencies = [
- "float-cmp",
- "specs",
- "tracing",
- "veloren-common-base",
-]
-
-[[package]]
-name = "veloren-common-frontend"
-version = "0.10.0"
-dependencies = [
- "termcolor",
- "tracing",
- "tracing-appender",
- "tracing-log",
- "tracing-subscriber",
- "tracing-tracy",
- "veloren-common-base",
-]
-
-[[package]]
-name = "veloren-common-net"
-version = "0.10.0"
-dependencies = [
- "bincode",
- "flate2",
- "hashbrown 0.12.3",
- "image",
- "num-traits",
- "serde",
- "specs",
- "sum_type",
- "tracing",
- "vek 0.15.8",
- "veloren-common",
-]
-
-[[package]]
-name = "veloren-common-state"
-version = "0.10.0"
-dependencies = [
- "bincode",
- "hashbrown 0.12.3",
- "num_cpus",
- "rayon",
- "scopeguard",
- "serde",
- "specs",
- "tar",
- "timer-queue",
- "toml",
- "tracing",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-ecs",
- "veloren-common-net",
- "veloren-plugin-api",
- "wasmer",
-]
-
-[[package]]
-name = "veloren-common-systems"
-version = "0.10.0"
-dependencies = [
- "hashbrown 0.12.3",
- "indexmap",
- "itertools",
- "ordered-float 3.1.0",
- "rand 0.8.5",
- "rayon",
- "slab",
- "specs",
- "tracing",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-ecs",
- "veloren-common-net",
- "veloren-common-state",
-]
-
-[[package]]
-name = "veloren-network"
-version = "0.3.0"
-dependencies = [
- "async-channel",
- "async-trait",
- "bincode",
- "bitflags",
- "bytes",
- "clap 3.2.22",
- "criterion",
- "crossbeam-channel",
- "futures-core",
- "futures-util",
- "hashbrown 0.12.3",
- "lazy_static",
- "lz-fear",
- "prometheus",
- "prometheus-hyper",
- "quinn",
- "rand 0.8.5",
- "rcgen",
- "rustls 0.20.6",
- "serde",
- "shellexpand",
- "socket2",
- "tokio",
- "tokio-stream",
- "tracing",
- "tracing-subscriber",
- "veloren-network-protocol",
-]
-
-[[package]]
-name = "veloren-network-protocol"
-version = "0.6.1"
-dependencies = [
- "async-channel",
- "async-trait",
- "bitflags",
- "bytes",
- "criterion",
- "hashbrown 0.12.3",
- "prometheus",
- "rand 0.8.5",
- "tokio",
- "tracing",
-]
-
-[[package]]
-name = "veloren-plugin-api"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "serde",
- "veloren-common",
-]
-
-[[package]]
-name = "veloren-plugin-derive"
-version = "0.1.0"
-dependencies = [
- "proc-macro2 1.0.43",
- "quote 1.0.21",
- "syn 1.0.100",
-]
-
-[[package]]
-name = "veloren-plugin-rt"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "serde",
- "veloren-plugin-api",
- "veloren-plugin-derive",
-]
-
-[[package]]
-name = "veloren-server"
-version = "0.14.0"
-dependencies = [
- "atomicwrites",
- "authc",
- "bincode",
- "censor",
- "chrono",
- "chrono-tz",
- "crossbeam-channel",
- "drop_guard",
- "enumset",
- "futures-util",
- "hashbrown 0.12.3",
- "humantime",
- "itertools",
- "lazy_static",
- "noise",
- "num_cpus",
- "parking_lot 0.12.0",
- "portpicker",
- "prometheus",
- "prometheus-hyper",
- "quinn",
- "rand 0.8.5",
- "rand_distr",
- "rayon",
- "refinery",
- "ron 0.8.0",
- "rusqlite",
- "rustls 0.20.6",
- "rustls-pemfile 1.0.1",
- "serde",
- "serde_json",
- "slab",
- "specs",
- "strum",
- "tokio",
- "tracing",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-ecs",
- "veloren-common-net",
- "veloren-common-state",
- "veloren-common-systems",
- "veloren-network",
- "veloren-plugin-api",
- "veloren-server-agent",
- "veloren-world",
-]
-
-[[package]]
-name = "veloren-server-agent"
-version = "0.1.0"
-dependencies = [
- "itertools",
- "lazy_static",
- "rand 0.8.5",
- "specs",
- "tracing",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-dynlib",
- "veloren-common-ecs",
-]
-
-[[package]]
-name = "veloren-server-cli"
-version = "0.14.0"
-dependencies = [
- "ansi-parser",
- "clap 3.2.22",
- "crossterm 0.25.0",
- "lazy_static",
- "mimalloc",
- "num_cpus",
- "ron 0.8.0",
- "serde",
- "shell-words",
- "signal-hook 0.3.14",
- "tokio",
- "tracing",
- "tui",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-frontend",
- "veloren-common-net",
- "veloren-server",
- "veloren-server-agent",
- "veloren-world",
-]
-
-[[package]]
-name = "veloren-voxygen"
-version = "0.14.0"
-dependencies = [
- "assets_manager",
- "backtrace",
- "bincode",
- "bytemuck",
- "chrono",
- "chumsky",
- "clap 3.2.22",
- "cmake",
- "conrod_core",
- "conrod_winit",
- "copy_dir",
- "cpal 0.14.0",
- "criterion",
- "crossbeam-channel",
- "crossbeam-utils 0.8.11",
- "directories-next",
- "discord-sdk",
- "dispatch 0.1.4",
- "dot_vox",
- "egui",
- "egui_wgpu_backend",
- "egui_winit_platform",
- "enum-iterator 1.1.3",
- "etagere",
- "euc",
- "gilrs",
- "glyph_brush",
- "guillotiere",
- "hashbrown 0.12.3",
- "iced_native",
- "iced_winit",
- "image",
- "inline_tweak",
- "itertools",
- "keyboard-keynames",
- "lazy_static",
- "levenshtein",
- "mimalloc",
- "mumble-link",
- "native-dialog",
- "num 0.4.0",
- "num_cpus",
- "ordered-float 3.1.0",
- "profiling",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
- "rayon",
- "rodio",
- "ron 0.8.0",
- "serde",
- "shaderc",
- "slab",
- "specs",
- "strum",
- "tokio",
- "tracing",
- "treeculler",
- "vek 0.15.8",
- "veloren-client",
- "veloren-client-i18n",
- "veloren-common",
- "veloren-common-assets",
- "veloren-common-base",
- "veloren-common-ecs",
- "veloren-common-frontend",
- "veloren-common-net",
- "veloren-common-state",
- "veloren-common-systems",
- "veloren-server",
- "veloren-voxygen-anim",
- "veloren-voxygen-egui",
- "veloren-voxygen-i18n-helpers",
- "veloren-world",
- "wgpu",
- "wgpu-profiler",
- "window_clipboard",
- "winit",
- "winres",
-]
-
-[[package]]
-name = "veloren-voxygen-anim"
-version = "0.10.0"
-dependencies = [
- "bytemuck",
- "lazy_static",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-dynlib",
-]
-
-[[package]]
-name = "veloren-voxygen-egui"
-version = "0.9.0"
-dependencies = [
- "egui",
- "egui_winit_platform",
- "lazy_static",
- "veloren-client",
- "veloren-common",
- "veloren-common-dynlib",
-]
-
-[[package]]
-name = "veloren-voxygen-i18n-helpers"
-version = "0.10.0"
-dependencies = [
- "tracing",
- "veloren-client-i18n",
- "veloren-common",
- "veloren-common-net",
-]
-
-[[package]]
-name = "veloren-world"
-version = "0.10.0"
-dependencies = [
- "arr_macro",
- "bincode",
- "bitvec",
- "clap 3.2.22",
- "criterion",
- "csv",
- "deflate",
- "enum-iterator 1.1.3",
- "fallible-iterator",
- "flate2",
- "fxhash",
- "hashbrown 0.12.3",
- "image",
- "inline_tweak",
- "itertools",
- "kiddo 0.2.4",
- "lazy_static",
- "lz-fear",
- "minifb",
- "noise",
- "num 0.4.0",
- "num-traits",
- "ordered-float 3.1.0",
- "packed_simd_2",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
- "rayon",
- "ron 0.8.0",
- "rstar",
- "rusqlite",
- "serde",
- "structopt",
- "strum",
- "svg_fmt",
- "tracing",
- "tracing-subscriber",
- "vek 0.15.8",
- "veloren-common",
- "veloren-common-base",
- "veloren-common-dynlib",
- "veloren-common-frontend",
- "veloren-common-net",
-]
-
-[[package]]
 name = "version-compare"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7302,6 +7552,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eaf9f5aceeec8be17c128b2e93e031fb8a4d469bb9c4ae2d7dc1888b26887268"
 dependencies = [
  "cfg-if 1.0.0",
+ "serde",
+ "serde_json",
  "wasm-bindgen-macro",
 ]
 
@@ -7776,6 +8028,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "webpki-roots"
+version = "0.20.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0f20dea7535251981a9670857150d571846545088359b28e4951d350bdaf179f"
+dependencies = [
+ "webpki 0.21.4",
+]
+
+[[package]]
 name = "wfd"
 version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8152,6 +8413,15 @@ dependencies = [
 
 [[package]]
 name = "winreg"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0120db82e8a1e0b9fb3345a539c478767c0048d842860994d96113d5b667bd69"
+dependencies = [
+ "winapi 0.3.9",
+]
+
+[[package]]
+name = "winreg"
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "80d0f4e272c85def139476380b12f9ac60926689dd2e01d4923222f40580869d"
@@ -8175,6 +8445,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d129932f4644ac2396cb456385cbf9e63b5b30c6e8dc4820bdca4eb082037a5"
 dependencies = [
  "winapi 0.3.9",
+]
+
+[[package]]
+name = "ws2_32-sys"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d59cefebd0c892fa2dd6de581e937301d8552cb44489cdff035c6187cb63fa5e"
+dependencies = [
+ "winapi 0.2.8",
+ "winapi-build",
 ]
 
 [[package]]

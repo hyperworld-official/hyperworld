@@ -1,5 +1,5 @@
 [package]
-name = "veloren-network"
+name = "hyperworld-network"
 version = "0.3.0"
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
@@ -15,7 +15,7 @@ default = ["metrics","compression","quic"]
 
 [dependencies]
 
-network-protocol = { package = "veloren-network-protocol", path = "protocol" }
+network-protocol = { package = "hyperworld-network-protocol", path = "protocol" }
 
 #serialisation
 bincode = "1.3.2"

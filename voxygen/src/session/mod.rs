@@ -137,7 +137,7 @@ impl SessionState {
             .borrow_mut()
             .set_lod_distance(global_state.settings.graphics.lod_distance);
         #[cfg(not(target_os = "macos"))]
-        let mut mumble_link = SharedLink::new("veloren", "veloren-voxygen");
+        let mut mumble_link = SharedLink::new("hyperworld", "hyperworld-voxygen");
         {
             let mut client = client.borrow_mut();
             client.request_player_physics(global_state.settings.networking.player_physics_behavior);
@@ -261,7 +261,7 @@ impl SessionState {
                 .map_or_else(comp::Ori::default, |o| *o);
             let front = ori.look_dir().to_vec();
             let top = ori.up().to_vec();
-            // converting from veloren z = height axis, to mumble y = height axis
+            // converting from hyperworld z = height axis, to mumble y = height axis
             let player_pos = mumble_link::Position {
                 position: [pos.x, pos.z, pos.y],
                 front: [front.x, front.z, front.y],

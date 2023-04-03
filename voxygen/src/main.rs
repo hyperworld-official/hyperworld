@@ -63,7 +63,7 @@ fn main() {
 
     info!("Using userdata dir at: {}", userdata_dir.display());
 
-    // Determine Voxygen's config directory either by env var or placed in veloren's
+    // Determine Voxygen's config directory either by env var or placed in hyperworld's
     // userdata folder
     let config_dir = std::env::var_os("VOXYGEN_CONFIG")
         .map(PathBuf::from)

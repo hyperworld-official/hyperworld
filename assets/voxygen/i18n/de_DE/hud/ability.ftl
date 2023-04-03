@@ -78,5 +78,5 @@ common-abilities-sword-reaching_flurry = Stürmischer Angriff
     .desc = Führe mehrere schnelle Stöße auf deinen Gegner aus.
 common-abilities-sword-reaching_skewer = Spieß
     .desc = Stürze dich mit genügend Kraft nach vorne, um mehrere Gegner zu durchbohren.
-veloren-core-pseudo_abilities-sword-stance_ability = Schwertstil-Fähigkeit
+hyperworld-core-pseudo_abilities-sword-stance_ability = Schwertstil-Fähigkeit
     .desc = Im Schwertstil hat diese Fähigkeit unterschiedliche Auswirkungen.

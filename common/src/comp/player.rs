@@ -55,7 +55,7 @@ impl Player {
 
     pub fn alias_validate(alias: &str) -> Result<(), AliasError> {
         // TODO: Expose auth name validation and use it here.
-        // See https://gitlab.com/veloren/auth/-/blob/master/server/src/web.rs#L20
+        // See https://gitlab.com/hyperworld1/hyperauth/-/blob/master/server/src/web.rs#L20
         if !alias
             .chars()
             .all(|c| c.is_alphanumeric() || c == '_' || c == '-')

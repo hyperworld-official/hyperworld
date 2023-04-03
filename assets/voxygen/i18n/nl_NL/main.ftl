@@ -2,7 +2,7 @@ main-connecting = Verbinden
 main-creating_world = Wereld aan het maken
 main-tip = Tip:
 main-notice =
-    Welkom bij de Alpha versie van Veloren!
+    Welkom bij de Alpha versie van Hyperworld!
     
     Voordat de fun begint zijn hier enkele dingen om rekening mee te houden:
     
@@ -10,16 +10,16 @@ main-notice =
     
     - Als je constructieve feedback hebt of bugs wil melden, kan je ons contacteren via Reddit, Gitlab of onze community Discord.
     
-    - Veloren is onder de GPL 3 open-source licentie gelicensieerd. Dat betekent dat je vrij bent om het spel te spelen, bewerken en doorgeven op welke manier
+    - Hyperworld is onder de GPL 3 open-source licentie gelicensieerd. Dat betekent dat je vrij bent om het spel te spelen, bewerken en doorgeven op welke manier
     je ook wil (zo lang afgeleide werken ook onder GPL 3 gelicensieerd zijn)
     
-    - Veloren is een non-profit community project, en iedereen dat er aan meehelpt is een vrijwilliger.
+    - Hyperworld is een non-profit community project, en iedereen dat er aan meehelpt is een vrijwilliger.
     Als je interesse hebt kan je je aansluiten bij onze ontwikkeling- of ontwerpteams!
     
     Bedankt voor de tijd te nemen om deze melding te lezen, we hopen dat je van het spel zult genieten!
     Thanks for taking the time to read this notice, we hope you enjoy the game!
     
-    ~ De Veloren ontwikkelaars
+    ~ De Hyperworld ontwikkelaars
 main-login_process =
     Information over het loginproces:
     
@@ -28,7 +28,7 @@ main-login_process =
     
     Je kan een account maken op
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = Server nie gevonden
 main-login-authentication_error = Authenticatie mislukt
 main-login-server_full = Server zit vol
@@ -60,7 +60,7 @@ loading-tips =
     .a12 = Een NPC met een doodshoofd onder zijn levensbalk is zeer sterk vergeleken met jezelf.
     .a13 = Druk op '{ $gameinput-dance }' om te dansen. Feestje!
     .a14 = Druk op '{ $gameinput-glide }' om je deltavlieger te openen en het luchtruim te veroveren.
-    .a15 = Veloren is nog steeds in Pre-Alpha. We doen ons best om het elke dag te verbeteren!
+    .a15 = Hyperworld is nog steeds in Pre-Alpha. We doen ons best om het elke dag te verbeteren!
     .a16 = Als je het ontwikkelingsteam wil versterken of gewoon een babbeltje wil doen met ons, kom dan langs op onze Discord-Server.
     .a17 = Je kan numerieke waarden in de levensbalk aan of uit zetten in de instellingen.
     .a18 = Om je stats te zien kan je op 'Stats' klikken in je Inventory.

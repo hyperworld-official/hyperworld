@@ -6,7 +6,7 @@ main-creating_world = Creating world
 main-tip = Tip:
 main-unbound_key_tip = unbound
 main-notice =
-    Welcome to the alpha version of Veloren!
+    Welcome to the alpha version of Hyperworld!
     
     Before you dive into the fun, please keep a few things in mind:
     
@@ -14,15 +14,15 @@ main-notice =
     
     - If you have constructive feedback or bug reports, you can contact us via Reddit, GitLab, or our community Discord server.
     
-    - Veloren is licensed under the GPL 3 open-source licence. That means you're free to play, modify, and redistribute the game however
+    - Hyperworld is licensed under the GPL 3 open-source licence. That means you're free to play, modify, and redistribute the game however
      you wish (provided derived work is also under GPL 3).
     
-    - Veloren is a non-profit community project, and everybody working on it is a volunteer.
+    - Hyperworld is a non-profit community project, and everybody working on it is a volunteer.
     If you like what you see, you're welcome to join the development or art teams!
     
     Thanks for taking the time to read this notice, we hope you enjoy the game!
     
-    ~ The Veloren Devs
+    ~ The Hyperworld Devs
 main-login_process =
     Information on the Login Process:
     
@@ -31,7 +31,7 @@ main-login_process =
     
     You can create an account over at
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = Server not found
 main-login-authentication_error = Auth error on server
 main-login-internal_error = Internal error on client (most likely, player character was deleted)
@@ -85,7 +85,7 @@ loading-tips =
     .a11 = Playing with others is fun! Press '{ $gameinput-social }' to see who is online.
     .a12 = Press '{ $gameinput-dance }' to dance. Party!
     .a13 = Press '{ $gameinput-glide }' to open your Glider and conquer the skies.
-    .a14 = Veloren is still in Pre-Alpha. We do our best to improve it every day!
+    .a14 = Hyperworld is still in Pre-Alpha. We do our best to improve it every day!
     .a15 = If you want to join the dev team or just have a chat with us, join our Discord server.
     .a16 = You can toggle showing your amount of health on the healthbar in the settings.
     .a17 = Sit near a campfire (with the '{ $gameinput-sit }' key) to slowly recover from your injuries.

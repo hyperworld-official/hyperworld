@@ -6,7 +6,7 @@ main-creating_world = Skapar värld
 main-tip = Tips:
 main-unbound_key_tip = obunden
 main-notice =
-    Välkommen till alfa-versionen av Veloren!
+    Välkommen till alfa-versionen av Hyperworld!
     
     Innan du dyker in i det roliga, ber vi dig hålla några saker i åtanke:
     
@@ -14,10 +14,10 @@ main-notice =
     
     - Om du har konstruktiva synpunkter eller buggar att rapportera går det bra att kontakta oss på Reddit, GitLab eller vår gemenskaps Discord-server.
     
-    - Veloren har öppen källkod, publicerad under licensen GPL 3. Det innebär att du får spela, modifiera och sprida spelet vidare precis
+    - Hyperworld har öppen källkod, publicerad under licensen GPL 3. Det innebär att du får spela, modifiera och sprida spelet vidare precis
      som du vill (så länge dina ändringar publiceras under samma licens).
     
-    - Veloren är ett projekt som drivs av en gemenskap utan vinstintresse och alla som bidrar är en volontär.
+    - Hyperworld är ett projekt som drivs av en gemenskap utan vinstintresse och alla som bidrar är en volontär.
     Om du gillar det du ser, får du gärna gå med i en utvecklings- eller konstgrupp!
     
     Tack för att du tog dig tid att läsa det här meddelandet, vi hoppas du kommer gilla spelet!
@@ -31,7 +31,7 @@ main-login_process =
     
     Du kan skapa ett konto på
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = Servern hittades inte
 main-login-authentication_error = Inloggningsfel på servern
 main-login-internal_error = Internt fel hos klienten (troligen på grund av att rollpersonen har raderats)
@@ -85,7 +85,7 @@ loading-tips =
     .a11 = Delad glädje är dubbel glädje! Tryck '{ $gameinput-social }' för att se vilka som spelar just nu.
     .a12 = Tryck '{ $gameinput-dance }' för att dansa. Party!
     .a13 = Tryck '{ $gameinput-glide }' för att använda din glidare och bli himlarnas härskare.
-    .a14 = Veloren är fortfarande i Pre-Alpha-stadiet. Vi gör vårt yttersta för att förbättra spelet varje dag!
+    .a14 = Hyperworld är fortfarande i Pre-Alpha-stadiet. Vi gör vårt yttersta för att förbättra spelet varje dag!
     .a15 = Om du vill gå med i utvecklargruppen eller bara snacka med oss får du gärna logga in på vår Discord-server.
     .a16 = Du kan välja att visa din hälsostatus i inställningarna.
     .a17 = Sitt nära en lägereld (tryck '{ $gameinput-sit }') för att långsamt återhämta dig från skador.

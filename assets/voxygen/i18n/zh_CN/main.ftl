@@ -6,7 +6,7 @@ main-creating_world = 创建世界中
 main-tip = 小提示:
 main-unbound_key_tip = 自由
 main-notice =
-    欢迎加入 Veloren Alpha 版本!
+    欢迎加入 Hyperworld Alpha 版本!
     
     在你开始享受游戏之前,请注意以下事情:
     
@@ -14,15 +14,15 @@ main-notice =
     
     - 如果有建设性的意见反馈或是错误汇报,可以通过 Reddit、GitLab 或者我们的 Discord 服务器联系我们.
     
-    - Veloren 的授权条款是GPL3. 意思是你可以免费游玩,
+    - Hyperworld 的授权条款是GPL3. 意思是你可以免费游玩,
     修改并重新发布游戏(衍生内容也必须是GPL3)
     
-    - Veloren 是一个非营利的社区项目, 参与该项目的都是志愿者.
+    - Hyperworld 是一个非营利的社区项目, 参与该项目的都是志愿者.
     如果你想在项目中看到你的身影,欢迎加入开发或艺术团队!
     
     感谢你抽出宝贵的时间阅读此通知,希望你喜欢这款游戏!
     
-    ~ The Veloren Devs
+    ~ The Hyperworld Devs
 main-login_process =
     有关登录的信息:
     
@@ -31,7 +31,7 @@ main-login_process =
     
     你可以通过下面的网站创建用户.
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = 找不到服务器
 main-login-authentication_error = 服务器验证错误
 main-login-internal_error = 客户端出现内部错误（很可能是玩家角色被删除）
@@ -85,7 +85,7 @@ loading-tips =
     .a11 = 和其他人一起游玩时! 按下 '{ $gameinput-social }' 查看在线玩家.
     .a12 = 按下 '{ $gameinput-dance }' 跳舞!
     .a13 = 按下 '{ $gameinput-glide }' 可以打开滑翔翼并立刻起飞
-    .a14 = Veloren 处于Pre-Alpha阶段. 我们每天都在努力改善它!
+    .a14 = Hyperworld 处于Pre-Alpha阶段. 我们每天都在努力改善它!
     .a15 = 如果您想加入开发团队或与我们聊天,请加入我们的Discord服务器.
     .a16 = 你可以在设置中的生命栏中切换显示你的生命状态.
     .a17 = 坐在篝火旁(同时按下 '{ $gameinput-sit }' 键),会缓慢恢复血量.

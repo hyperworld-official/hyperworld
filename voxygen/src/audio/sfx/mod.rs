@@ -1,7 +1,7 @@
 //! Manages individual sfx event system, listens for sfx events, and requests
 //! playback at the requested position and volume
 //!
-//! Veloren's sfx are managed through a configuration which lives in the
+//! Hyperworld's sfx are managed through a configuration which lives in the
 //! codebase under `/assets/voxygen/audio/sfx.ron`.
 //!
 //! If there are errors while reading or deserialising the configuration file, a

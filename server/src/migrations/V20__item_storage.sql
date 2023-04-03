@@ -13,13 +13,13 @@ CREATE TEMP TABLE _temp_loadout_containers
 AS
 SELECT  item_id
 FROM    item
-WHERE   item_definition_id = 'veloren.core.pseudo_containers.loadout';
+WHERE   item_definition_id = 'hyperworld.core.pseudo_containers.loadout';
 
 -- Insert an entity ID for each new bag item (3 per existing loadout)
 WITH loadout_containers AS (
     SELECT 1
     FROM    item
-    WHERE   item_definition_id = 'veloren.core.pseudo_containers.loadout')
+    WHERE   item_definition_id = 'hyperworld.core.pseudo_containers.loadout')
 INSERT
 INTO    entity
 SELECT  NULL FROM loadout_containers
@@ -34,7 +34,7 @@ SELECT item_id                                                                  
        ROW_NUMBER() OVER(ORDER BY item_id) + (SELECT COUNT(1) FROM _temp_loadout_containers)     AS temp_id_bag2,
        ROW_NUMBER() OVER(ORDER BY item_id) + (SELECT COUNT(1) * 2 FROM _temp_loadout_containers) AS temp_id_bag3
 FROM item
-WHERE item_definition_id = 'veloren.core.pseudo_containers.loadout';
+WHERE item_definition_id = 'hyperworld.core.pseudo_containers.loadout';
 
 INSERT INTO item
 SELECT (SELECT MAX(entity_id) - temp_id_bag1 + 1 from entity) as new_item_id,
@@ -71,7 +71,7 @@ WITH inventory_items AS (
             CAST(i2.position AS NUMBER) AS position
     FROM    item i
                 JOIN    item i2 ON (i2.parent_container_item_id = i.item_id)
-    WHERE   i.item_definition_id = 'veloren.core.pseudo_containers.inventory'
+    WHERE   i.item_definition_id = 'hyperworld.core.pseudo_containers.inventory'
 ),
      new_positions AS (
          SELECT item_id,

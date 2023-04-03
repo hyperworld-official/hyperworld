@@ -371,7 +371,7 @@ All notable changes to this project will be documented in this file.
 - 村民和守卫现在都带着药水出生，并知道如何使用它们。
 - 在地牢中进入敌人范围时的战斗音乐。
 - 新指令："kit"，将一组物品放入你的库存中
-- 添加了 --sql-log-mode profile/trace 参数到 veloren-server-cli 
+- 添加了 --sql-log-mode profile/trace 参数到 hyperworld-server-cli 
 - 添加了 /disconnect_all_players 管理命令
 - 增加了disconnectall CLI命令
 - 现在可以在世界范围内使用和找到单手武器了
@@ -753,7 +753,7 @@ All notable changes to this project will be documented in this file.
 - 增加了派别聊天 `/join_faction` `/faction`。
 - 增加了区域、本地和全球聊天（分别为`/region`、`/say`和`/world`）。
 - 增加了上述每种聊天模式的命令快捷键（分别为`/g`, `/f`, `/r`, `/s`, 和`/w`, 以及`/t`用于`/tell`）。
-- 能够挥舞2×1小时的武器和盾牌（注意：1小时的武器和盾牌目前还不能使用，更多信息见[!1095](https://gitlab.com/veloren/veloren/-/merge_requests/1095)
+- 能够挥舞2×1小时的武器和盾牌（注意：1小时的武器和盾牌目前还不能使用，更多信息见[!1095](https://gitlab.com/hyperworld1/hyperworld/-/merge_requests/1095)
 - 可放大的地图
 - 锤子的M2攻击
 - 可再生的训练假人
@@ -871,7 +871,7 @@ All notable changes to this project will be documented in this file.
 - New attack animation
 - Weapon control system
 - Game pauses when in single player and pause menu
-- Added authentication system (to play on the official server register on <https://account.veloren.net>)
+- Added authentication system (to play on the official server register on <https://account.hyperworld.net>)
 - Added gamepad/controller support
 - Added player feedback when attempting to pickup an item with a full inventory
 - Added free look
@@ -939,7 +939,7 @@ All notable changes to this project will be documented in this file.
 - 新的攻击动画
 - 武器控制系统
 - 在单人游戏和暂停菜单中，游戏会暂停
-- 增加了认证系统（要在官方服务器上玩，请注册<https://account.veloren.net>）。
+- 增加了认证系统（要在官方服务器上玩，请注册<https://account.hyperworld.net>）。
 - 增加了游戏手柄/控制器支持
 - 增加了试图在满载的情况下拾取物品时的玩家反馈
 - 增加了自由外观
@@ -1319,17 +1319,17 @@ All notable changes to this project will be documented in this file.
 
 _0.1.0 was part of the legacy engine_
 
-[unreleased]: https://gitlab.com/veloren/veloren/compare?from=v0.13.0&to=master
-[0.13.0]: https://gitlab.com/veloren/veloren/compare?from=v0.12.0&to=v0.13.0
-[0.12.0]: https://gitlab.com/veloren/veloren/compare?from=v0.11.0&to=v0.12.0
-[0.11.0]: https://gitlab.com/veloren/veloren/compare?from=v0.10.0&to=v0.11.0
-[0.10.0]: https://gitlab.com/veloren/veloren/compare?from=v0.9.0&to=v0.10.0
-[0.9.0]: https://gitlab.com/veloren/veloren/compare?from=v0.8.0&to=v0.9.0
-[0.8.0]: https://gitlab.com/veloren/veloren/compare?from=v0.7.0&to=v0.8.0
-[0.7.0]: https://gitlab.com/veloren/veloren/compare?from=v0.6.0&to=v0.7.0
-[0.6.0]: https://gitlab.com/veloren/veloren/compare?from=v0.5.0&to=v0.6.0
-[0.5.0]: https://gitlab.com/veloren/veloren/compare?from=v0.4.0&to=v0.5.0
-[0.4.0]: https://gitlab.com/veloren/veloren/compare?from=v0.3.0&to=v0.4.0
-[0.3.0]: https://gitlab.com/veloren/veloren/compare?from=v0.2.0&to=v0.3.0
-[0.2.0]: https://gitlab.com/veloren/veloren/compare?from=7d17f8b67a2a6d5aa00730f028cedc430fd5075a&to=v0.2.0
-[0.1.0]: https://gitlab.com/veloren/game
+[unreleased]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.13.0&to=master
+[0.13.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.12.0&to=v0.13.0
+[0.12.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.11.0&to=v0.12.0
+[0.11.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.10.0&to=v0.11.0
+[0.10.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.9.0&to=v0.10.0
+[0.9.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.8.0&to=v0.9.0
+[0.8.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.7.0&to=v0.8.0
+[0.7.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.6.0&to=v0.7.0
+[0.6.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.5.0&to=v0.6.0
+[0.5.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.4.0&to=v0.5.0
+[0.4.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.3.0&to=v0.4.0
+[0.3.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=v0.2.0&to=v0.3.0
+[0.2.0]: https://gitlab.com/hyperworld1/hyperworld/compare?from=7d17f8b67a2a6d5aa00730f028cedc430fd5075a&to=v0.2.0
+[0.1.0]: https://gitlab.com/hyperworld1/game

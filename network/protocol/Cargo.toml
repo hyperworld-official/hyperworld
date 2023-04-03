@@ -1,5 +1,5 @@
 [package]
-name = "veloren-network-protocol"
+name = "hyperworld-network-protocol"
 description = "pure Protocol without any I/O itself"
 version = "0.6.1"
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]

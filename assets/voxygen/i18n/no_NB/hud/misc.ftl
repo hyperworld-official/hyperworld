@@ -10,7 +10,7 @@ hud-press_key_to_toggle_keybindings_fmt = Trykk { $key } for å skru av/på hurt
 hud-press_key_to_toggle_debug_info_fmt = Trykk { $key } for å skru av/på feilsøkingsinformasjon
 hud-press_key_to_respawn = Trykk { $key } for å gjennopstå ved det siste bålet du besøkte.
 hud-welcome =
-    Velkommen til Veloren Alfa!
+    Velkommen til Hyperworld Alfa!
     
     
     Noen tips før du begynner:
@@ -32,7 +32,7 @@ hud-welcome =
     Kast dem ved å klikke og dra dem utenfor inventaret.
     
     
-    Nettene kan bli ganske mørke i Veloren.
+    Nettene kan bli ganske mørke i Hyperworld.
     
     Tenn din lykt ved å trykke på 'G'.
     
@@ -40,7 +40,7 @@ hud-welcome =
     Vil du frigjøre markøren for å lukke dette vinduet? Trykk på TAB!
     
     
-    Kos deg i verden av Veloren.
+    Kos deg i verden av Hyperworld.
 hud-temp_quest_headline = Vær så snill, Hjelp oss reisende!
 hud-temp_quest_text =
     Fangehull fylt med onde kultister

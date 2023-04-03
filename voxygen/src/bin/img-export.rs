@@ -30,7 +30,7 @@ pub fn main() {
                     offset: Vec3::from(*offset),
                     /* FIXME: This is a dirty workaround to not cut off the edges of some objects
                      * like ./img-export/weapon/component/axe/poleaxe/bronze.vox
-                     * more details here: https://gitlab.com/veloren/veloren/-/merge_requests/3494#note_1205030803 */
+                     * more details here: https://gitlab.com/hyperworld1/hyperworld/-/merge_requests/3494#note_1205030803 */
                     zoom: *zoom * 0.8,
                     orth: true,
                     stretch: false,

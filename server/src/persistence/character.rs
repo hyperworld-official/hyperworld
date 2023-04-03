@@ -41,9 +41,9 @@ mod conversions;
 
 pub(crate) type EntityId = i64;
 
-const CHARACTER_PSEUDO_CONTAINER_DEF_ID: &str = "veloren.core.pseudo_containers.character";
-const INVENTORY_PSEUDO_CONTAINER_DEF_ID: &str = "veloren.core.pseudo_containers.inventory";
-const LOADOUT_PSEUDO_CONTAINER_DEF_ID: &str = "veloren.core.pseudo_containers.loadout";
+const CHARACTER_PSEUDO_CONTAINER_DEF_ID: &str = "hyperworld.core.pseudo_containers.character";
+const INVENTORY_PSEUDO_CONTAINER_DEF_ID: &str = "hyperworld.core.pseudo_containers.inventory";
+const LOADOUT_PSEUDO_CONTAINER_DEF_ID: &str = "hyperworld.core.pseudo_containers.loadout";
 const INVENTORY_PSEUDO_CONTAINER_POSITION: &str = "inventory";
 const LOADOUT_PSEUDO_CONTAINER_POSITION: &str = "loadout";
 const WORLD_PSEUDO_CONTAINER_ID: EntityId = 1;

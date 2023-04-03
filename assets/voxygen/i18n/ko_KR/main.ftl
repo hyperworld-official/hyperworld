@@ -31,7 +31,7 @@ main-login_process =
     
     계정은 다음 링크를 통해 만들수 있습니다.
     
-    https://veloren.net/account/.
+    https://hyperworld.net/account/.
 main-login-server_not_found = 서버를 찾지 못함
 main-login-authentication_error = 서버에서 인증 오류
 main-login-internal_error = 클라이언트 내부 오류 (플레이어의 캐릭터가 삭제되었을 가능성이 높습니다)

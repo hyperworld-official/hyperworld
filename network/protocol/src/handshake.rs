@@ -52,7 +52,7 @@ where
     ) -> Result<(Pid, Sid, u128), InitProtocolError<E>> {
         #[cfg(debug_assertions)]
         const WRONG_NUMBER: &str = "Handshake does not contain the magic number required by \
-                                    veloren server.\nWe are not sure if you are a valid veloren \
+                                    hyperworld server.\nWe are not sure if you are a valid hyperworld \
                                     client.\nClosing the connection";
         #[cfg(debug_assertions)]
         const WRONG_VERSION: &str = "Handshake does contain a correct magic number, but invalid \

@@ -1,7 +1,7 @@
 /// Experimental shader modes.
 ///
 /// You can enable these using Voxygen's `settings.ron`. See
-/// [here](https://book.veloren.net/players/voxygen.html#experimental-shaders) for more information.
+/// [here](https://book.hyperworld.net/players/voxygen.html#experimental-shaders) for more information.
 #[derive(
     Clone,
     Debug,

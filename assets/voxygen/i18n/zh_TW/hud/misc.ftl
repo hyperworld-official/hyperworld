@@ -8,7 +8,7 @@ hud-press_key_to_toggle_keybindings_fmt = 按 { $key } 以切換按鍵設置
 hud-press_key_to_toggle_debug_info_fmt = 按 { $key } 以切換除錯資訊
 hud-press_key_to_respawn = 按 { $key } 以重生在上一個營火堆。
 hud-welcome =
-    歡迎來到 Veloren Alpha 版，
+    歡迎來到 Hyperworld Alpha 版，
     
     
     以下是些開始前的提示：
@@ -35,7 +35,7 @@ hud-welcome =
     要拋棄它們的話，可以按它們一次然後再點背包外面一次
     
     
-    Veloren 半夜會特別暗。
+    Hyperworld 半夜會特別暗。
     
     在聊天欄輸入 /lantern 可以點亮提燈
     
@@ -43,6 +43,6 @@ hud-welcome =
     想要用滑鼠關閉這個視窗？請按 TAB！
     
     
-    祝您的 Veloren 旅途愉快。
+    祝您的 Hyperworld 旅途愉快。
 hud-spell = 法術
 hud-free_look_indicator = 進入自由視角中

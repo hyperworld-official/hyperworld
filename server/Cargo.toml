@@ -1,5 +1,5 @@
 [package]
-name = "veloren-server"
+name = "hyperworld-server"
 version = "0.14.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>"]
 edition = "2021"
@@ -16,16 +16,16 @@ hot-site = ["world/use-dyn-lib"]
 default = ["worldgen", "plugins", "persistent_world", "simd"]
 
 [dependencies]
-common = { package = "veloren-common", path = "../common" }
-common-base = { package = "veloren-common-base", path = "../common/base" }
-common-ecs = { package = "veloren-common-ecs", path = "../common/ecs" }
-common-state = { package = "veloren-common-state", path = "../common/state" }
-common-systems = { package = "veloren-common-systems", path = "../common/systems" }
-common-net = { package = "veloren-common-net", path = "../common/net" }
-world = { package = "veloren-world", path = "../world" }
-network = { package = "veloren-network", path = "../network", features = ["metrics", "compression", "quic"], default-features = false }
+common = { package = "hyperworld-common", path = "../common" }
+common-base = { package = "hyperworld-common-base", path = "../common/base" }
+common-ecs = { package = "hyperworld-common-ecs", path = "../common/ecs" }
+common-state = { package = "hyperworld-common-state", path = "../common/state" }
+common-systems = { package = "hyperworld-common-systems", path = "../common/systems" }
+common-net = { package = "hyperworld-common-net", path = "../common/net" }
+world = { package = "hyperworld-world", path = "../world" }
+network = { package = "hyperworld-network", path = "../network", features = ["metrics", "compression", "quic"], default-features = false }
 
-server-agent = {package = "veloren-server-agent", path = "agent"}
+server-agent = {package = "hyperworld-server-agent", path = "agent"}
 
 #inline_tweak = "1.0.8"
 
@@ -59,7 +59,8 @@ rayon = "1.5"
 crossbeam-channel = "0.5"
 prometheus = { version = "0.13", default-features = false}
 portpicker = { git = "https://github.com/xMAC94x/portpicker-rs", rev = "df6b37872f3586ac3b21d08b56c8ec7cd92fb172" }
-authc = { git = "https://gitlab.com/veloren/auth.git", rev = "fb3dcbc4962b367253f8f2f92760ef44d2679c9a" }
+authc = { git = "https://gitlab.com/hyperworld1/hyperauth.git" }
+# authc = { git = "https://gitlab.com/hyperworld1/hyperauth.git", rev = "fb3dcbc4962b367253f8f2f92760ef44d2679c9a" }
 slab  = "0.4"
 rand_distr = "0.4.0"
 enumset = "1.0.8"
@@ -70,4 +71,4 @@ rusqlite = { version = "0.24.2", features = ["array", "vtab", "bundled", "trace"
 refinery = { git = "https://gitlab.com/veloren/refinery.git", rev = "8ecf4b4772d791e6c8c0a3f9b66a7530fad1af3e", features = ["rusqlite"] }
 
 # Plugins
-plugin-api = { package = "veloren-plugin-api", path = "../plugin/api"}
+plugin-api = { package = "hyperworld-plugin-api", path = "../plugin/api"}

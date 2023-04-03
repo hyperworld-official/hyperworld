@@ -17,7 +17,7 @@ fn main() {
     let matches = Command::new("Chat example")
         .version("0.1.0")
         .author("Marcel Märtens <marcel.cochem@googlemail.com>")
-        .about("example chat implemented with veloren-network")
+        .about("example chat implemented with hyperworld-network")
         .arg(
             Arg::new("mode")
                 .short('m')
