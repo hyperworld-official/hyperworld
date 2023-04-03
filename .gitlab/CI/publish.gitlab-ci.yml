@@ -10,7 +10,7 @@
 docker:
   extends: .publish
   image:
-    name: gcr.io/kaniko-project/executor:debug
+    name: registry.cn-hangzhou.aliyuncs.com/hyperworld1/kaniko-project-executor:debug
     entrypoint: [""]
   tags: ["hyperworld/hyperworld", "publish", "trusted"]
   dependencies:
@@ -21,7 +21,7 @@ docker:
     # Help kaniko identify that it is running in a container.
     # avoids this issue: https://github.com/GoogleContainerTools/kaniko/issues/1542
     - export container=docker
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PWD $CI_REGISTRY
     - |
       source "$CI_PROJECT_DIR/.gitlab/scripts/util.sh";
       publishdockertag;
