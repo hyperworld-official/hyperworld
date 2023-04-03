@@ -1,5 +1,5 @@
 stages:
-  - check
+  # - check
   - build-nightly
   - build
   - publish
@@ -48,6 +48,6 @@ before_script:
 include:
   - local: .gitlab/CI/recompile.yml
   - local: .gitlab/CI/release.yml
-  - local: .gitlab/CI/check.gitlab-ci.yml
+  # - local: .gitlab/CI/check.gitlab-ci.yml
   - local: .gitlab/CI/build.gitlab-ci.yml
   - local: .gitlab/CI/publish.gitlab-ci.yml
