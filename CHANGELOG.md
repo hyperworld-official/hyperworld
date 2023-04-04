@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setting in userdata/server/server_config/settings.ron that controls the length of each day/night cycle.
 
 ### Changed
+- Refactory - from voloren to hyperworld
+- Devops - use simple yml from hyperauth
 - Bats move slower and use a simple proportional controller to maintain altitude
 - Bats now have less health
 - Climbing no longer requires having 10 energy
