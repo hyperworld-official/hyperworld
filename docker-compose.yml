@@ -14,9 +14,9 @@ services:
         - "/Users/lryain/docker-volume/hyperworld-server-cli/userdata:/opt/userdata"
     environment:
         - RUST_LOG=debug,common::net=info
-  # watchtower:
-  #   image: containrrr/watchtower
-  #   volumes:
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #   command: --interval 30 --stop-timeout 130s --cleanup hyperworld-game-server-master
-  #   restart: on-failure:0
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 --stop-timeout 130s --cleanup hyperworld-game-server-master
+    restart: on-failure:0
