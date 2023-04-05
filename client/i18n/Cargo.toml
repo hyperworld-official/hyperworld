@@ -12,16 +12,16 @@ ron = "0.8"
 serde = { version = "1.0", features = ["derive"] }
 # Localization
 unic-langid = { version = "0.9"}
-intl-memoizer = { git = "https://github.com/juliancoffee/fluent-rs.git", branch = "patched"}
-fluent = { git = "https://github.com/juliancoffee/fluent-rs.git", branch = "patched"}
-fluent-bundle = { git = "https://github.com/juliancoffee/fluent-rs.git", branch = "patched"}
+intl-memoizer = { git = "https://gitlab.com/hyperworld1/dependency/fluent-rs.git", branch = "patched"}
+fluent = { git = "https://gitlab.com/hyperworld1/dependency/fluent-rs.git", branch = "patched"}
+fluent-bundle = { git = "https://gitlab.com/hyperworld1/dependency/fluent-rs.git", branch = "patched"}
 # Utility
 hashbrown = { version = "0.12", features = ["serde", "nightly"] }
 deunicode = "1.0"
 tracing = "0.1"
 # Bin
 clap = { version = "3.1.8", features = ["suggestions", "std"], default-features = false, optional = true }
-fluent-syntax = { git = "https://github.com/juliancoffee/fluent-rs.git", branch = "patched"}
+fluent-syntax = { git = "https://gitlab.com/hyperworld1/dependency/fluent-rs.git", branch = "patched"}
 
 [[bin]]
 name = "i18n-check"

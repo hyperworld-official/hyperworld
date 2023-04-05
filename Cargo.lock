@@ -2061,7 +2061,7 @@ dependencies = [
 [[package]]
 name = "fluent"
 version = "0.16.0"
-source = "git+https://github.com/juliancoffee/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
+source = "git+https://gitlab.com/hyperworld1/dependency/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
 dependencies = [
  "fluent-bundle",
  "unic-langid",
@@ -2070,7 +2070,7 @@ dependencies = [
 [[package]]
 name = "fluent-bundle"
 version = "0.15.2"
-source = "git+https://github.com/juliancoffee/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
+source = "git+https://gitlab.com/hyperworld1/dependency/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
 dependencies = [
  "fluent-langneg",
  "fluent-syntax",
@@ -2094,7 +2094,7 @@ dependencies = [
 [[package]]
 name = "fluent-syntax"
 version = "0.11.0"
-source = "git+https://github.com/juliancoffee/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
+source = "git+https://gitlab.com/hyperworld1/dependency/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
 dependencies = [
  "thiserror",
 ]
@@ -3580,7 +3580,7 @@ dependencies = [
 [[package]]
 name = "intl-memoizer"
 version = "0.5.1"
-source = "git+https://github.com/juliancoffee/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
+source = "git+https://gitlab.com/hyperworld1/dependency/fluent-rs.git?branch=patched#929cf9512de121cce9b4cbf1cb860cd3294a1cd9"
 dependencies = [
  "type-map",
  "unic-langid",
@@ -7203,7 +7203,7 @@ dependencies = [
 [[package]]
 name = "vek"
 version = "0.15.8"
-source = "git+https://github.com/yoanlcq/vek.git?rev=84d5cb65841d46599a986c5477341bea4456be26#84d5cb65841d46599a986c5477341bea4456be26"
+source = "git+https://gitlab.com/hyperworld1/dependency/vek.git?rev=84d5cb65841d46599a986c5477341bea4456be26#84d5cb65841d46599a986c5477341bea4456be26"
 dependencies = [
  "approx 0.5.1",
  "num-integer",
@@ -7788,7 +7788,7 @@ dependencies = [
 [[package]]
 name = "wgpu"
 version = "0.8.0"
-source = "git+https://github.com/pythonesque/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
+source = "git+https://gitlab.com/hyperworld1/dependency/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
 dependencies = [
  "arrayvec 0.5.2",
  "js-sys",
@@ -7808,7 +7808,7 @@ dependencies = [
 [[package]]
 name = "wgpu-core"
 version = "0.8.0"
-source = "git+https://github.com/pythonesque/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
+source = "git+https://gitlab.com/hyperworld1/dependency/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
 dependencies = [
  "arrayvec 0.5.2",
  "bitflags",
@@ -7848,7 +7848,7 @@ dependencies = [
 [[package]]
 name = "wgpu-types"
 version = "0.8.0"
-source = "git+https://github.com/pythonesque/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
+source = "git+https://gitlab.com/hyperworld1/dependency/wgpu.git?rev=179ea209374a92837cde252f1d9ee01f628cae08#179ea209374a92837cde252f1d9ee01f628cae08"
 dependencies = [
  "bitflags",
  "serde",
