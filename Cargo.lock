@@ -1758,7 +1758,7 @@ dependencies = [
 [[package]]
 name = "egui_wgpu_backend"
 version = "0.8.0"
-source = "git+https://github.com/hasenbanck/egui_wgpu_backend.git?rev=63a002c6a9b6c016e45806dd065864431caab621#63a002c6a9b6c016e45806dd065864431caab621"
+source = "git+https://gitlab.com/hyperworld1/dependency/egui_wgpu_backend.git?rev=63a002c6a9b6c016e45806dd065864431caab621#63a002c6a9b6c016e45806dd065864431caab621"
 dependencies = [
  "bytemuck",
  "epi",
@@ -3427,12 +3427,12 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.4.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 
 [[package]]
 name = "iced_futures"
 version = "0.3.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 dependencies = [
  "futures",
  "log",
@@ -3442,7 +3442,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.2.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 dependencies = [
  "bytemuck",
  "glam",
@@ -3455,7 +3455,7 @@ dependencies = [
 [[package]]
 name = "iced_native"
 version = "0.4.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 dependencies = [
  "iced_core",
  "iced_futures",
@@ -3467,7 +3467,7 @@ dependencies = [
 [[package]]
 name = "iced_style"
 version = "0.3.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 dependencies = [
  "iced_core",
 ]
@@ -3475,7 +3475,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.3.0"
-source = "git+https://github.com/Imberflur/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
+source = "git+https://gitlab.com/hyperworld1/dependency/iced?tag=winit-0.25#18a48a5eeefd2aa6e50f5dd0751ac2e94c88a9eb"
 dependencies = [
  "iced_futures",
  "iced_graphics",
@@ -5099,7 +5099,7 @@ dependencies = [
 [[package]]
 name = "portpicker"
 version = "0.1.0"
-source = "git+https://github.com/xMAC94x/portpicker-rs?rev=df6b37872f3586ac3b21d08b56c8ec7cd92fb172#df6b37872f3586ac3b21d08b56c8ec7cd92fb172"
+source = "git+https://gitlab.com/hyperworld1/dependency/portpicker-rs?rev=df6b37872f3586ac3b21d08b56c8ec7cd92fb172#df6b37872f3586ac3b21d08b56c8ec7cd92fb172"
 dependencies = [
  "rand 0.8.5",
 ]
@@ -6193,7 +6193,7 @@ dependencies = [
 [[package]]
 name = "shaderc"
 version = "0.8.0"
-source = "git+https://github.com/pythonesque/shaderc-rs?rev=f2605a02062834019bedff911aee2fd2998c49f9#f2605a02062834019bedff911aee2fd2998c49f9"
+source = "git+https://gitlab.com/hyperworld1/dependency/shaderc-rs-deps?rev=ac73fe7ed033b040764ee55626ad6b5eebbc3bcc#ac73fe7ed033b040764ee55626ad6b5eebbc3bcc"
 dependencies = [
  "libc",
  "shaderc-sys",
@@ -6202,7 +6202,7 @@ dependencies = [
 [[package]]
 name = "shaderc-sys"
 version = "0.8.0"
-source = "git+https://github.com/pythonesque/shaderc-rs?rev=f2605a02062834019bedff911aee2fd2998c49f9#f2605a02062834019bedff911aee2fd2998c49f9"
+source = "git+https://gitlab.com/hyperworld1/dependency/shaderc-rs-deps?rev=ac73fe7ed033b040764ee55626ad6b5eebbc3bcc#ac73fe7ed033b040764ee55626ad6b5eebbc3bcc"
 dependencies = [
  "cmake",
  "libc",
@@ -7007,7 +7007,7 @@ checksum = "7b3e06c9b9d80ed6b745c7159c40b311ad2916abb34a49e9be2653b90db0d8dd"
 [[package]]
 name = "tui"
 version = "0.10.0"
-source = "git+https://github.com/fdehau/tui-rs.git?branch=paragraph-scroll#54b841fab6cfdb38e8dc1382176e965787964b4c"
+source = "git+https://gitlab.com/hyperworld1/dependency/tui-rs.git?branch=paragraph-scroll#54b841fab6cfdb38e8dc1382176e965787964b4c"
 dependencies = [
  "bitflags",
  "cassowary",
@@ -7839,7 +7839,7 @@ dependencies = [
 [[package]]
 name = "wgpu-profiler"
 version = "0.4.0"
-source = "git+https://github.com/Imberflur/wgpu-profiler?tag=wgpu-0.8#b156eb145bc223386ef344860d9b33b3c181650c"
+source = "git+https://gitlab.com/hyperworld1/dependency/wgpu-profiler?tag=wgpu-0.8#b156eb145bc223386ef344860d9b33b3c181650c"
 dependencies = [
  "futures",
  "wgpu",
