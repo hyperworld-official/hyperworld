@@ -16,6 +16,7 @@ build:
   #   name: docker:latest
   #   entrypoint: [""]
   stage: build
+  when: always
   tags:
     - hyperworld/*
   before_script:
@@ -31,7 +32,7 @@ build:
     # - echo "remove container ${CONTAINER_NAME}"
     # - docker rm ${IMAGE_NAME}
     # 调用dockerfile编译镜像 t
-    - docker build -f ${DOCKER_FILE_PATH} -t ${IMAGE_NAME} .
+    # - docker build -f ${DOCKER_FILE_PATH} -t ${IMAGE_NAME} .
   artifacts:
       name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
       untracked: false
@@ -44,6 +45,7 @@ build:
 # publish stage
 pushimage:
   stage: push
+  when: manual
   tags: ["hyperworld/*"]
   before_script:
     - echo "---------> login to aliyun!..."
@@ -55,6 +57,7 @@ pushimage:
 
 run:
   stage: run
+  when: manual
   tags:
     - hyperworld/*
   before_script:
@@ -68,6 +71,7 @@ run:
 
 # before run the image we need to stop and remove previously container
 cleanctr:
+  when: manual
   stage: clean
   allow_failure: true
   before_script:
